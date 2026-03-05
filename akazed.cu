@@ -1378,34 +1378,23 @@ namespace akaze
 		if (*vp > threshold && *vp > *vp0 && *vp > *vp2 && *vp > *(vp - 1) && *vp > *(vp + 1) &&
 			*vp > *(vp0 - 1) && *vp > *(vp0 + 1) && *vp > *(vp2 - 1) && *vp > *(vp2 + 1))
 		{
-			// The thread may conflict ( But if the minimum execution unit is block, the thread is safe )
 			int oix = (ix << octave);
 			int oiy = (iy << octave);
 			int oidx = oiy * opitch + oix;
-			if (response_map[oidx] < *vp)
+			/* Atomic max for reproducibility: atomicCAS loop (positive floats) */
+			unsigned int* addr = (unsigned int*)&response_map[oidx];
+			unsigned int old_uint = *addr;
+			while (*vp > __uint_as_float(old_uint))
 			{
-				response_map[oidx] = *vp;
-				size_map[oidx] = size;
-				layer_map[oidx] = octave * max_scale + curr_scale;
+				unsigned int assumed = old_uint;
+				old_uint = atomicCAS(addr, assumed, __float_as_uint(*vp));
+				if (assumed == old_uint)
+				{
+					size_map[oidx] = size;
+					layer_map[oidx] = octave * max_scale + curr_scale;
+					break;
+				}
 			}
-
-			//while (true) 
-			//{
-			//	if (0 == atomicCAS(mutex, 0, 1)) 
-			//	{
-			//		// **** critical section ****//
-			//		if (response_map[oidx] < *vp)
-			//		{
-			//			response_map[oidx] = *vp;
-			//			size_map[oidx] = size;
-			//			octave_map[oidx] = octave;
-			//		}
-			//		__threadfence();
-			//		// **** critical section ****//
-			//		atomicExch(mutex, 0);
-			//		break;
-			//	}
-			//}
 		}
 	}
 
@@ -3575,34 +3564,16 @@ namespace fastakaze
 		if (*vp > threshold && *vp > *vp0 && *vp > *vp2 && *vp > *(vp - 1) && *vp > *(vp + 1) &&
 			*vp > *(vp0 - 1) && *vp > *(vp0 + 1) && *vp > *(vp2 - 1) && *vp > *(vp2 + 1))
 		{
-			// The thread may conflict ( But if the minimum execution unit is block, the thread is safe )
 			int oix = (ix << octave);
 			int oiy = (iy << octave);
 			int oidx = oiy * opitch + oix;
-			if (response_map[oidx] < *vp)
+			/* Atomic max for reproducibility */
+			int old_val = atomicMax(&response_map[oidx], *vp);
+			if (old_val < *vp)
 			{
-				response_map[oidx] = *vp;
 				size_map[oidx] = size;
 				layer_map[oidx] = octave * max_scale + curr_scale;
 			}
-
-			//while (true) 
-			//{
-			//	if (0 == atomicCAS(mutex, 0, 1)) 
-			//	{
-			//		// **** critical section ****//
-			//		if (response_map[oidx] < *vp)
-			//		{
-			//			response_map[oidx] = *vp;
-			//			size_map[oidx] = size;
-			//			octave_map[oidx] = octave;
-			//		}
-			//		__threadfence();
-			//		// **** critical section ****//
-			//		atomicExch(mutex, 0);
-			//		break;
-			//	}
-			//}
 		}
 	}
 
