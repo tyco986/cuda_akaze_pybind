@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/workspace/cuda_akaze_pybind/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

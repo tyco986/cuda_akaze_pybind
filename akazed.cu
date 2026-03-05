@@ -453,23 +453,24 @@ namespace akaze
 		int tiy = threadIdx.y;
 		int dix = blockIdx.x * blockDim.x + tix;
 		int diy = blockIdx.y * blockDim.y + tiy;
-		if (dix >= dwhp.x || diy >= dwhp.y)
-		{
-			return;
-		}
+		bool in_bounds = (dix < dwhp.x && diy < dwhp.y);
 		int six = dix + dix;
 		int siy = diy + diy;
 		int ystart = siy * swhp.z;
 		int toy = tiy + 2;
 
-		// Weighted by row
+		// Weighted by row (all threads must participate for __syncthreads)
 		int sxes[5] = { abs(six - 4), abs(six - 2), six, borderAdd(six, 2, swhp.x), borderAdd(six, 4, swhp.x) };
-		//int syes[5] = { abs(siy - 4), abs(siy - 2), siy, borderAdd(siy, 2, swhp.y), borderAdd(siy, 4, swhp.y) };
-
-		// Current row
-		sdata[toy][tix] = d_lowpass_kernel[0] * src[ystart + sxes[2]] +
-			d_lowpass_kernel[1] * (src[ystart + sxes[1]] + src[ystart + sxes[3]]) +
-			d_lowpass_kernel[2] * (src[ystart + sxes[0]] + src[ystart + sxes[4]]);
+		if (in_bounds)
+		{
+			sdata[toy][tix] = d_lowpass_kernel[0] * src[ystart + sxes[2]] +
+				d_lowpass_kernel[1] * (src[ystart + sxes[1]] + src[ystart + sxes[3]]) +
+				d_lowpass_kernel[2] * (src[ystart + sxes[0]] + src[ystart + sxes[4]]);
+		}
+		else
+		{
+			sdata[toy][tix] = 0.0f;
+		}
 
 		int yborder = X2 - 1;
 		int new_toy = toy, new_siy = siy;
@@ -496,18 +497,28 @@ namespace akaze
 		if (at_edge)
 		{
 			int new_ystart = new_siy * swhp.z;
-			sdata[new_toy][tix] = d_lowpass_kernel[0] * src[new_ystart + sxes[2]] +
-				d_lowpass_kernel[1] * (src[new_ystart + sxes[1]] + src[new_ystart + sxes[3]]) +
-				d_lowpass_kernel[2] * (src[new_ystart + sxes[0]] + src[new_ystart + sxes[4]]);
+			if (in_bounds)
+			{
+				sdata[new_toy][tix] = d_lowpass_kernel[0] * src[new_ystart + sxes[2]] +
+					d_lowpass_kernel[1] * (src[new_ystart + sxes[1]] + src[new_ystart + sxes[3]]) +
+					d_lowpass_kernel[2] * (src[new_ystart + sxes[0]] + src[new_ystart + sxes[4]]);
+			}
+			else
+			{
+				sdata[new_toy][tix] = 0.0f;
+			}
 		}
 		__syncthreads();
 
 		// Weighted by col
-		int didx = diy * dwhp.z + dix;
-		dst[didx] = src[ystart + six];
-		smooth[didx] = d_lowpass_kernel[0] * sdata[toy][tix] +
-			d_lowpass_kernel[1] * (sdata[toy - 1][tix] + sdata[toy + 1][tix]) +
-			d_lowpass_kernel[2] * (sdata[toy - 2][tix] + sdata[toy + 2][tix]);
+		if (in_bounds)
+		{
+			int didx = diy * dwhp.z + dix;
+			dst[didx] = src[ystart + six];
+			smooth[didx] = d_lowpass_kernel[0] * sdata[toy][tix] +
+				d_lowpass_kernel[1] * (sdata[toy - 1][tix] + sdata[toy + 1][tix]) +
+				d_lowpass_kernel[2] * (sdata[toy - 2][tix] + sdata[toy + 2][tix]);
+		}
 	}
 
 
@@ -833,14 +844,11 @@ namespace akaze
 		int iy0 = blockIdx.y * X2 * 2 + tiy;
 		int ix1 = ix0 + X2;
 		int iy1 = iy0 + X2;
-		if (ix0 >= width || iy0 >= height)
-		{
-			return;
-		}
+		bool in_bounds = (ix0 < width && iy0 < height);
 
-		// Unroll
+		// Unroll (only when in bounds)
 		int x0y0 = iy0 * pitch + ix0;
-		if (iy1 < height)
+		if (in_bounds && iy1 < height)
 		{
 			int x0y1 = iy1 * pitch + ix0;
 			sort2vals(src, x0y0, x0y1);
@@ -850,13 +858,15 @@ namespace akaze
 				sort2vals(src, x0y0, x1y1);
 			}
 		}
-		if (ix1 < width)
+		if (in_bounds && ix1 < width)
 		{
 			int x1y0 = iy0 * pitch + ix1;
 			sort2vals(src, x0y0, x1y0);
 		}
 
-		// Reduce maximum
+		// Reduce maximum (all threads reach __syncthreads to avoid deadlock)
+		int block_ox = blockIdx.x * X2 * 2;
+		int block_oy = blockIdx.y * X2 * 2;
 		for (int stride = X2 * X2 / 2; stride > 0; stride >>= 1)
 		{
 			if (tid < stride)
@@ -864,12 +874,16 @@ namespace akaze
 				int nid = tid + stride;
 				int niy = nid / X2;
 				int nix = nid % X2;
+				bool nid_in_bounds = (block_ox + nix < width) && (block_oy + niy < height);
 				int nidx = niy * pitch + nix;
-				sort2vals(src, x0y0, nidx);
+				if (in_bounds && nid_in_bounds)
+				{
+					sort2vals(src, x0y0, nidx);
+				}
 			}
 			__syncthreads();
 		}
-		if (tid == 0)
+		if (tid == 0 && in_bounds)
 		{
 			unsigned int* gradi = (unsigned int*)&src[x0y0];
 			atomicMax(&d_max_contrast, *gradi);
@@ -906,10 +920,7 @@ namespace akaze
 		int tiy = threadIdx.y;
 		int ix = blockIdx.x * 32 + tix;
 		int iy = blockIdx.y * 16 + tiy;
-		if (ix >= width && iy >= height)
-		{
-			return;
-		}
+		bool in_bounds = (ix < width && iy < height);
 
 		// Initialization
 		int tid = tiy * 32 + tix;
@@ -919,14 +930,17 @@ namespace akaze
 		}
 		__syncthreads();
 
-		// Statistical
-		int idx = iy * pitch + ix;
-		int hi = __fmul_rz(grad[idx], factor);
-		if (hi >= NBINS)
+		// Statistical (only when in bounds to avoid __syncthreads deadlock)
+		if (in_bounds)
 		{
-			hi = NBINS - 1;
+			int idx = iy * pitch + ix;
+			int hi = __fmul_rz(grad[idx], factor);
+			if (hi >= NBINS)
+			{
+				hi = NBINS - 1;
+			}
+			atomicAdd(shist + hi, 1);
 		}
-		atomicAdd(shist + hi, 1);
 		__syncthreads();
 
 		// Cumulative
@@ -2172,16 +2186,20 @@ namespace akaze
 		indice[tid] = tid;
 		__syncthreads();
 
-		// Compute in template shared memory
-		for (int pi = tid + X2; pi < n2; pi += X2)
+		// Compute in template shared memory (fixed iteration count to avoid __syncthreads deadlock)
+		int max_iter = (n2 > X2) ? ((n2 - 1 - X2) / X2 + 1) : 0;
+		for (int k = 0; k < max_iter; k++)
 		{
-			// Compute hamming distance
-			p2 = &points2[pi];
-			int dist = dHammingDistance2(ofeat, p2->features);
-			if (dist < distance[tid])
+			int pi = (k + 1) * X2 + tid;
+			if (pi < n2)
 			{
-				distance[tid] = dist;
-				indice[tid] = pi;
+				p2 = &points2[pi];
+				int dist = dHammingDistance2(ofeat, p2->features);
+				if (dist < distance[tid])
+				{
+					distance[tid] = dist;
+					indice[tid] = pi;
+				}
 			}
 			__syncthreads();
 		}
@@ -3147,23 +3165,24 @@ namespace fastakaze
 		int tiy = threadIdx.y;
 		int dix = blockIdx.x * blockDim.x + tix;
 		int diy = blockIdx.y * blockDim.y + tiy;
-		if (dix >= dwhp.x || diy >= dwhp.y)
-		{
-			return;
-		}
+		bool in_bounds = (dix < dwhp.x && diy < dwhp.y);
 		int six = dix + dix;
 		int siy = diy + diy;
 		int ystart = siy * swhp.z;
 		int toy = tiy + 2;
 
-		// Weighted by row
+		// Weighted by row (all threads must participate for __syncthreads)
 		int sxes[5] = { abs(six - 4), abs(six - 2), six, borderAdd(six, 2, swhp.x), borderAdd(six, 4, swhp.x) };
-		//int syes[5] = { abs(siy - 4), abs(siy - 2), siy, borderAdd(siy, 2, swhp.y), borderAdd(siy, 4, swhp.y) };
-
-		// Current row
-		sdata[toy][tix] = (d_lowpass_kernel[0] * src[ystart + sxes[2]] +
-			d_lowpass_kernel[1] * (src[ystart + sxes[1]] + src[ystart + sxes[3]]) +
-			d_lowpass_kernel[2] * (src[ystart + sxes[0]] + src[ystart + sxes[4]])) >> 16;
+		if (in_bounds)
+		{
+			sdata[toy][tix] = (d_lowpass_kernel[0] * src[ystart + sxes[2]] +
+				d_lowpass_kernel[1] * (src[ystart + sxes[1]] + src[ystart + sxes[3]]) +
+				d_lowpass_kernel[2] * (src[ystart + sxes[0]] + src[ystart + sxes[4]])) >> 16;
+		}
+		else
+		{
+			sdata[toy][tix] = 0;
+		}
 
 		int yborder = X2 - 1;
 		int new_toy = toy, new_siy = siy;
@@ -3190,18 +3209,28 @@ namespace fastakaze
 		if (at_edge)
 		{
 			int new_ystart = new_siy * swhp.z;
-			sdata[new_toy][tix] = (d_lowpass_kernel[0] * src[new_ystart + sxes[2]] +
-				d_lowpass_kernel[1] * (src[new_ystart + sxes[1]] + src[new_ystart + sxes[3]]) +
-				d_lowpass_kernel[2] * (src[new_ystart + sxes[0]] + src[new_ystart + sxes[4]])) >> 16;
+			if (in_bounds)
+			{
+				sdata[new_toy][tix] = (d_lowpass_kernel[0] * src[new_ystart + sxes[2]] +
+					d_lowpass_kernel[1] * (src[new_ystart + sxes[1]] + src[new_ystart + sxes[3]]) +
+					d_lowpass_kernel[2] * (src[new_ystart + sxes[0]] + src[new_ystart + sxes[4]])) >> 16;
+			}
+			else
+			{
+				sdata[new_toy][tix] = 0;
+			}
 		}
 		__syncthreads();
 
 		// Weighted by col
-		int didx = diy * dwhp.z + dix;
-		dst[didx] = src[ystart + six];
-		smooth[didx] = (d_lowpass_kernel[0] * sdata[toy][tix] +
-			d_lowpass_kernel[1] * (sdata[toy - 1][tix] + sdata[toy + 1][tix]) +
-			d_lowpass_kernel[2] * (sdata[toy - 2][tix] + sdata[toy + 2][tix])) >> 16;
+		if (in_bounds)
+		{
+			int didx = diy * dwhp.z + dix;
+			dst[didx] = src[ystart + six];
+			smooth[didx] = (d_lowpass_kernel[0] * sdata[toy][tix] +
+				d_lowpass_kernel[1] * (sdata[toy - 1][tix] + sdata[toy + 1][tix]) +
+				d_lowpass_kernel[2] * (sdata[toy - 2][tix] + sdata[toy + 2][tix])) >> 16;
+		}
 	}
 
 
@@ -3251,14 +3280,11 @@ namespace fastakaze
 		int iy0 = blockIdx.y * X2 * 2 + tiy;
 		int ix1 = ix0 + X2;
 		int iy1 = iy0 + X2;
-		if (ix0 >= width || iy0 >= height)
-		{
-			return;
-		}
+		bool in_bounds = (ix0 < width && iy0 < height);
 
-		// Unroll
+		// Unroll (only when in bounds)
 		int x0y0 = iy0 * pitch + ix0;
-		if (iy1 < height)
+		if (in_bounds && iy1 < height)
 		{
 			int x0y1 = iy1 * pitch + ix0;
 			sort2vals(src, x0y0, x0y1);
@@ -3268,13 +3294,15 @@ namespace fastakaze
 				sort2vals(src, x0y0, x1y1);
 			}
 		}
-		if (ix1 < width)
+		if (in_bounds && ix1 < width)
 		{
 			int x1y0 = iy0 * pitch + ix1;
 			sort2vals(src, x0y0, x1y0);
 		}
 
-		// Reduce maximum
+		// Reduce maximum (all threads reach __syncthreads to avoid deadlock)
+		int block_ox = blockIdx.x * X2 * 2;
+		int block_oy = blockIdx.y * X2 * 2;
 		for (int stride = X2 * X2 / 2; stride > 0; stride >>= 1)
 		{
 			if (tid < stride)
@@ -3282,12 +3310,16 @@ namespace fastakaze
 				int nid = tid + stride;
 				int niy = nid / X2;
 				int nix = nid % X2;
+				bool nid_in_bounds = (block_ox + nix < width) && (block_oy + niy < height);
 				int nidx = niy * pitch + nix;
-				sort2vals(src, x0y0, nidx);
+				if (in_bounds && nid_in_bounds)
+				{
+					sort2vals(src, x0y0, nidx);
+				}
 			}
 			__syncthreads();
 		}
-		if (tid == 0)
+		if (tid == 0 && in_bounds)
 		{
 			atomicMax(&d_max_contrast, src[x0y0]);
 		}
@@ -3302,10 +3334,7 @@ namespace fastakaze
 		int tiy = threadIdx.y;
 		int ix = blockIdx.x * 32 + tix;
 		int iy = blockIdx.y * 16 + tiy;
-		if (ix >= width && iy >= height)
-		{
-			return;
-		}
+		bool in_bounds = (ix < width && iy < height);
 
 		// Initialization
 		int tid = tiy * 32 + tix;
@@ -3315,16 +3344,19 @@ namespace fastakaze
 		}
 		__syncthreads();
 
-		// Statistical
-		int idx = iy * pitch + ix;
-		//int hi = (int)(((long long)grad[idx] * factor) >> 32);
-		//int hi = (int)(grad[idx] * factor + 0.5f);
-		int hi = (grad[idx] * factor) >> 16;
-		if (hi >= NBINS)
+		// Statistical (only when in bounds to avoid __syncthreads deadlock)
+		if (in_bounds)
 		{
-			hi = NBINS - 1;
+			int idx = iy * pitch + ix;
+			//int hi = (int)(((long long)grad[idx] * factor) >> 32);
+			//int hi = (int)(grad[idx] * factor + 0.5f);
+			int hi = (grad[idx] * factor) >> 16;
+			if (hi >= NBINS)
+			{
+				hi = NBINS - 1;
+			}
+			atomicAdd(shist + hi, 1);
 		}
-		atomicAdd(shist + hi, 1);
 		__syncthreads();
 
 		// Cumulative

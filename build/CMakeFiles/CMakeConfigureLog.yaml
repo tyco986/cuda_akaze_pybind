@@ -1,0 +1,3721 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/uname"
+      - "/usr/local/nvidia/bin/uname"
+      - "/usr/local/cuda/bin/uname"
+      - "/opt/conda/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/gmake"
+      - "/usr/local/nvidia/bin/gmake"
+      - "/usr/local/cuda/bin/gmake"
+      - "/opt/conda/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/cc"
+      - "/usr/local/nvidia/bin/cc"
+      - "/usr/local/cuda/bin/cc"
+      - "/opt/conda/bin/cc"
+      - "/usr/local/sbin/cc"
+      - "/usr/local/bin/cc"
+      - "/usr/sbin/cc"
+    found: "/usr/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/"
+    found: "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /workspace/cuda_akaze_pybind/build/CMakeFiles/4.1.2/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/dlltool"
+      - "/usr/local/nvidia/bin/dlltool"
+      - "/usr/local/cuda/bin/dlltool"
+      - "/opt/conda/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/tapi"
+      - "/usr/local/nvidia/bin/tapi"
+      - "/usr/local/cuda/bin/tapi"
+      - "/opt/conda/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-11.4"
+      - "gcc-ar-11"
+      - "gcc-ar11"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-11.4"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/gcc-ar-11.4"
+      - "/usr/local/nvidia/bin/gcc-ar-11.4"
+      - "/usr/local/cuda/bin/gcc-ar-11.4"
+      - "/opt/conda/bin/gcc-ar-11.4"
+      - "/usr/local/sbin/gcc-ar-11.4"
+      - "/usr/local/bin/gcc-ar-11.4"
+      - "/usr/sbin/gcc-ar-11.4"
+      - "/sbin/gcc-ar-11.4"
+      - "/bin/gcc-ar-11.4"
+    found: "/usr/bin/gcc-ar-11"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-11.4"
+      - "gcc-ranlib-11"
+      - "gcc-ranlib11"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-11.4"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/gcc-ranlib-11.4"
+      - "/usr/local/nvidia/bin/gcc-ranlib-11.4"
+      - "/usr/local/cuda/bin/gcc-ranlib-11.4"
+      - "/opt/conda/bin/gcc-ranlib-11.4"
+      - "/usr/local/sbin/gcc-ranlib-11.4"
+      - "/usr/local/bin/gcc-ranlib-11.4"
+      - "/usr/sbin/gcc-ranlib-11.4"
+      - "/sbin/gcc-ranlib-11.4"
+      - "/bin/gcc-ranlib-11.4"
+    found: "/usr/bin/gcc-ranlib-11"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "CC"
+      - "g++"
+      - "aCC"
+      - "cl"
+      - "bcc"
+      - "xlC"
+      - "icpx"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "/usr/bin/"
+    found: "/usr/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/"
+    found: "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /workspace/cuda_akaze_pybind/build/CMakeFiles/4.1.2/CompilerIdCXX/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-11.4"
+      - "gcc-ar-11"
+      - "gcc-ar11"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-11.4"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/gcc-ar-11.4"
+      - "/usr/local/nvidia/bin/gcc-ar-11.4"
+      - "/usr/local/cuda/bin/gcc-ar-11.4"
+      - "/opt/conda/bin/gcc-ar-11.4"
+      - "/usr/local/sbin/gcc-ar-11.4"
+      - "/usr/local/bin/gcc-ar-11.4"
+      - "/usr/sbin/gcc-ar-11.4"
+      - "/sbin/gcc-ar-11.4"
+      - "/bin/gcc-ar-11.4"
+    found: "/usr/bin/gcc-ar-11"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-11.4"
+      - "gcc-ranlib-11"
+      - "gcc-ranlib11"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-11.4"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/gcc-ranlib-11.4"
+      - "/usr/local/nvidia/bin/gcc-ranlib-11.4"
+      - "/usr/local/cuda/bin/gcc-ranlib-11.4"
+      - "/opt/conda/bin/gcc-ranlib-11.4"
+      - "/usr/local/sbin/gcc-ranlib-11.4"
+      - "/usr/local/bin/gcc-ranlib-11.4"
+      - "/usr/sbin/gcc-ranlib-11.4"
+      - "/sbin/gcc-ranlib-11.4"
+      - "/bin/gcc-ranlib-11.4"
+    found: "/usr/bin/gcc-ranlib-11"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN"
+      binary: "/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN'
+        
+        Run Build Command(s): /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7ae6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7ae6.dir/build.make CMakeFiles/cmTC_e7ae6.dir/build
+        gmake[1]: Entering directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN'
+        Building C object CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -c /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7ae6.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e7ae6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc0vwtNd.s
+        GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/11/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 50eaa2331df977b8016186198deb2d18
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7ae6.dir/'
+         as -v --64 -o CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o /tmp/cc0vwtNd.s
+        GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_e7ae6
+        /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7ae6.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7ae6' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7ae6.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccghdStv.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7ae6 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        collect2 version 11.4.0
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccghdStv.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7ae6 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.38
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7ae6' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7ae6.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -o cmTC_e7ae6
+        gmake[1]: Leaving directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7ae6/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_e7ae6.dir/build.make CMakeFiles/cmTC_e7ae6.dir/build]
+        ignore line: [gmake[1]: Entering directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-KOtdHN']
+        ignore line: [Building C object CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -c /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7ae6.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e7ae6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc0vwtNd.s]
+        ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 50eaa2331df977b8016186198deb2d18]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7ae6.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o /tmp/cc0vwtNd.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_e7ae6]
+        ignore line: [/opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7ae6.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7ae6' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7ae6.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccghdStv.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7ae6 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccghdStv.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_e7ae6] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/local/cuda/lib64/stubs] ==> dir [/usr/local/cuda/lib64/stubs]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 11.4.0]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccghdStv.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7ae6 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_e7ae6.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/local/cuda/lib64/stubs] ==> [/usr/local/cuda/lib64/stubs]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib;/usr/local/cuda/lib64/stubs]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.38
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci"
+      binary: "/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci'
+        
+        Run Build Command(s): /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_15463/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_15463.dir/build.make CMakeFiles/cmTC_15463.dir/build
+        gmake[1]: Entering directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci'
+        Building CXX object CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -c /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_15463.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_15463.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc1CUjsP.s
+        GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/11
+         /usr/include/x86_64-linux-gnu/c++/11
+         /usr/include/c++/11/backward
+         /usr/lib/gcc/x86_64-linux-gnu/11/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_15463.dir/'
+         as -v --64 -o CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc1CUjsP.s
+        GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_15463
+        /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15463.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_15463' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_15463.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPxU3ID.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_15463 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        collect2 version 11.4.0
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPxU3ID.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_15463 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.38
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_15463' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_15463.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_15463
+        gmake[1]: Leaving directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/11]
+          add: [/usr/include/x86_64-linux-gnu/c++/11]
+          add: [/usr/include/c++/11/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/11] ==> [/usr/include/x86_64-linux-gnu/c++/11]
+        collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/11;/usr/include/x86_64-linux-gnu/c++/11;/usr/include/c++/11/backward;/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_15463/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_15463.dir/build.make CMakeFiles/cmTC_15463.dir/build]
+        ignore line: [gmake[1]: Entering directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-5qA3ci']
+        ignore line: [Building CXX object CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -c /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_15463.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_15463.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc1CUjsP.s]
+        ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/11]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/11]
+        ignore line: [ /usr/include/c++/11/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_15463.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc1CUjsP.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_15463]
+        ignore line: [/opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15463.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/local/cuda/lib64/stubs/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_15463' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_15463.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPxU3ID.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_15463 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccPxU3ID.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_15463] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/local/cuda/lib64/stubs] ==> dir [/usr/local/cuda/lib64/stubs]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 11.4.0]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPxU3ID.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_15463 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/local/cuda/lib64/stubs -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_15463.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/local/cuda/lib64/stubs] ==> [/usr/local/cuda/lib64/stubs]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib;/usr/local/cuda/lib64/stubs]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.38
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:8 (find_package)"
+    name: "OpenCV"
+    configs:
+      -
+        filename: "OpenCVConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "opencv-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "OpenCV"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/workspace/cuda_akaze_pybind/build/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/workspace/cuda_akaze_pybind/build/CMakeFiles/pkgRedirects/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/cuda/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/cuda/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/conda/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/conda/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
+      mode: "config"
+      version: "4.5.4"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:843 (find_program)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "program"
+    variable: "CUDA_TOOLKIT_ROOT_DIR_NVCC"
+    description: "Toolkit location."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nvcc"
+      - "nvcc.exe"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:855 (find_program)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "program"
+    variable: "CUDA_TOOLKIT_ROOT_DIR_NVCC"
+    description: "Toolkit location."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nvcc"
+      - "nvcc.exe"
+    candidate_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/cuda/bin/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/cuda/bin/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/cuda/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/cuda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/cuda/bin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/cuda/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/cuda/bin/"
+      - "/usr/bin/"
+      - "/sbin/cuda/bin/"
+      - "/sbin/"
+      - "/bin/cuda/bin/"
+      - "/bin/"
+      - "/usr/local/bin/cuda/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/cuda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/cuda/bin/"
+      - "/usr/local/"
+      - "/usr/bin/cuda/bin/"
+      - "/usr/bin/"
+      - "/usr/sbin/cuda/bin/"
+      - "/usr/sbin/"
+      - "/usr/cuda/bin/"
+      - "/usr/"
+      - "/bin/cuda/bin/"
+      - "/bin/"
+      - "/sbin/cuda/bin/"
+      - "/sbin/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/bin/cuda/bin/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/bin/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/sbin/cuda/bin/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/sbin/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/cuda/bin/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/"
+      - "/usr/X11R6/bin/cuda/bin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/cuda/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/cuda/bin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/cuda/bin/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/cuda/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/cuda/bin/"
+      - "/usr/pkg/"
+      - "/opt/bin/cuda/bin/"
+      - "/opt/bin/"
+      - "/opt/sbin/cuda/bin/"
+      - "/opt/sbin/"
+      - "/opt/cuda/bin/"
+      - "/opt/"
+      - "/opt/cuda/bin/cuda/bin/"
+      - "/opt/cuda/bin/"
+    searched_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/cuda/bin/nvcc"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/nvcc"
+      - "/usr/local/nvidia/bin/cuda/bin/nvcc"
+      - "/usr/local/nvidia/bin/nvcc"
+      - "/usr/local/cuda/bin/cuda/bin/nvcc"
+    found: "/usr/local/cuda/bin/nvcc"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:933 (find_program)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:943 (cuda_find_host_program)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "program"
+    variable: "CUDA_NVCC_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nvcc"
+    candidate_directories:
+      - "/usr/local/cuda/bin/"
+      - "/usr/local/cuda/bin64/"
+      - "/usr/local/cuda/"
+    found: "/usr/local/cuda/bin/nvcc"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:974 (find_path)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "path"
+    variable: "CUDA_TOOLKIT_INCLUDE"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "device_functions.h"
+    candidate_directories:
+      - "/usr/local/cuda/include/"
+      - "/usr/local/cuda/"
+    found: "/usr/local/cuda/include/"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1033 (cuda_find_library_local_first)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_CUDART_LIBRARY"
+    description: "\"cudart\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cudart"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcudart.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1043 (cuda_find_library_local_first)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cudart_static_LIBRARY"
+    description: "static CUDA runtime library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cudart_static"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcudart_static.a"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1063 (cuda_find_library_local_first)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cudadevrt_LIBRARY"
+    description: "\"cudadevrt\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cudadevrt"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcudadevrt.a"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1077 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-xI2rhH"
+      binary: "/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-xI2rhH"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fPIC"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-xI2rhH'
+        
+        Run Build Command(s): /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8a677/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8a677.dir/build.make CMakeFiles/cmTC_8a677.dir/build
+        gmake[1]: Entering directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-xI2rhH'
+        Building C object CMakeFiles/cmTC_8a677.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_8a677.dir/src.c.o -c /workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-xI2rhH/src.c
+        Linking C executable cmTC_8a677
+        /opt/conda/lib/python3.11/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a677.dir/link.txt --verbose=1
+        /usr/bin/cc -fPIC  CMakeFiles/cmTC_8a677.dir/src.c.o -o cmTC_8a677
+        gmake[1]: Leaving directory '/workspace/cuda_akaze_pybind/build/CMakeFiles/CMakeScratch/TryCompile-xI2rhH'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1082 (find_library)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_rt_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rt"
+    candidate_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/lib/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+    searched_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/x86_64-linux-gnu/librt.a"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1093 (cuda_find_library_local_first_with_path_ext)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cupti_LIBRARY"
+    description: "\"cupti\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cupti"
+    candidate_directories:
+      - "/usr/local/cuda/extras/CUPTI/lib/x64/"
+      - "/usr/local/cuda/extras/CUPTI/lib64/"
+      - "/usr/local/cuda/extras/CUPTI/libx64/"
+      - "/usr/local/cuda/extras/CUPTI/lib/Win32/"
+      - "/usr/local/cuda/extras/CUPTI/lib/"
+      - "/usr/local/cuda/extras/CUPTI/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/extras/CUPTI/lib/x64/"
+      - "/usr/local/cuda/extras/CUPTI/lib64/"
+      - "/usr/local/cuda/extras/CUPTI/libx64/"
+      - "/usr/local/cuda/extras/CUPTI/lib/Win32/"
+      - "/usr/local/cuda/extras/CUPTI/lib/"
+      - "/usr/local/cuda/extras/CUPTI/libWin32/"
+      - "/usr/local/cuda/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1128 (cuda_find_library_local_first)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_CUDA_LIBRARY"
+    description: "\"cuda\" library (older versions only)."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cuda"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1015 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1128 (cuda_find_library_local_first)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_CUDA_LIBRARY"
+    description: "\"cuda\" library (older versions only)."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cuda"
+    candidate_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/x86_64-linux-gnu/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib/x86_64-linux-gnu/"
+      - "/lib/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/lib/x86_64-linux-gnu/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/lib/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/"
+      - "/usr/X11R6/lib/x86_64-linux-gnu/"
+      - "/usr/X11R6/lib/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/lib/x86_64-linux-gnu/"
+      - "/usr/pkg/lib/"
+      - "/usr/pkg/"
+      - "/opt/lib/x86_64-linux-gnu/"
+      - "/opt/lib/"
+      - "/opt/"
+      - "/usr/lib/X11/"
+      - "/usr/lib/nvidia-current/"
+    searched_directories:
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/lib/x86_64-linux-gnu/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+    found: "/usr/lib/x86_64-linux-gnu/libcuda.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1156 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cufft_LIBRARY"
+    description: "\"cufft\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cufft"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcufft.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1157 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cublas_LIBRARY"
+    description: "\"cublas\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcublas.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1160 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cusparse_LIBRARY"
+    description: "\"cusparse\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cusparse"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcusparse.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1161 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_curand_LIBRARY"
+    description: "\"curand\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "curand"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcurand.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1173 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nvToolsExt_LIBRARY"
+    description: "\"nvToolsExt\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nvToolsExt"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1174 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_OpenCL_LIBRARY"
+    description: "\"OpenCL\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "OpenCL"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1179 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppc_LIBRARY"
+    description: "\"nppc\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppc"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppc.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1180 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppial_LIBRARY"
+    description: "\"nppial\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppial"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppial.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1181 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppicc_LIBRARY"
+    description: "\"nppicc\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppicc"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppicc.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1187 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppidei_LIBRARY"
+    description: "\"nppidei\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppidei"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppidei.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1188 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppif_LIBRARY"
+    description: "\"nppif\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppif"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppif.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1189 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppig_LIBRARY"
+    description: "\"nppig\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppig"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppig.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1190 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppim_LIBRARY"
+    description: "\"nppim\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppim"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppim.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1191 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppist_LIBRARY"
+    description: "\"nppist\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppist"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppist.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1192 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppisu_LIBRARY"
+    description: "\"nppisu\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppisu"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppisu.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1193 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_nppitc_LIBRARY"
+    description: "\"nppitc\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nppitc"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnppitc.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1194 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_npps_LIBRARY"
+    description: "\"npps\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "npps"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libnpps.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1004 (find_library)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1024 (cuda_find_library_local_first_with_path_ext)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1138 (cuda_find_library_local_first)"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1207 (find_cuda_helper_libs)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "library"
+    variable: "CUDA_cusolver_LIBRARY"
+    description: "\"cusolver\" library"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cusolver"
+    candidate_directories:
+      - "/usr/local/cuda/lib/x64/"
+      - "/usr/local/cuda/lib64/"
+      - "/usr/local/cuda/libx64/"
+      - "/usr/local/cuda/lib/Win32/"
+      - "/usr/local/cuda/lib/"
+      - "/usr/local/cuda/libWin32/"
+      - "/usr/local/cuda/"
+    searched_directories:
+      - "/usr/local/cuda/lib/x64/"
+    found: "/usr/local/cuda/lib64/libcusolver.so"
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/share/cmake-4.1/Modules/FindCUDA.cmake:1221 (find_path)"
+      - "CMakeLists.txt:9 (find_package)"
+    mode: "path"
+    variable: "CUDA_SDK_ROOT_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "common/inc/cutil.h"
+    candidate_directories:
+      - "/C/"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/"
+      - "/usr/local/nvidia/bin/"
+      - "/usr/local/cuda/bin/"
+      - "/opt/conda/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/include/x86_64-linux-gnu/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/x86_64-linux-gnu/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/x86_64-linux-gnu/"
+      - "/include/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/include/x86_64-linux-gnu/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/include/"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/"
+      - "/usr/X11R6/include/x86_64-linux-gnu/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/x86_64-linux-gnu/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/x86_64-linux-gnu/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+      - "/Developer/GPU Computing/C/"
+    searched_directories:
+      - "/C/common/inc/cutil.h"
+      - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli/common/inc/cutil.h"
+      - "/usr/local/nvidia/bin/common/inc/cutil.h"
+      - "/usr/local/cuda/bin/common/inc/cutil.h"
+      - "/opt/conda/bin/common/inc/cutil.h"
+      - "/usr/local/sbin/common/inc/cutil.h"
+      - "/usr/local/bin/common/inc/cutil.h"
+      - "/usr/sbin/common/inc/cutil.h"
+      - "/usr/bin/common/inc/cutil.h"
+      - "/sbin/common/inc/cutil.h"
+      - "/bin/common/inc/cutil.h"
+      - "/usr/local/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/usr/local/include/common/inc/cutil.h"
+      - "/usr/local/common/inc/cutil.h"
+      - "/usr/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/usr/include/common/inc/cutil.h"
+      - "/usr/common/inc/cutil.h"
+      - "/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/include/common/inc/cutil.h"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/include/common/inc/cutil.h"
+      - "/opt/conda/lib/python3.11/site-packages/cmake/data/common/inc/cutil.h"
+      - "/usr/X11R6/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/usr/X11R6/include/common/inc/cutil.h"
+      - "/usr/X11R6/common/inc/cutil.h"
+      - "/usr/pkg/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/usr/pkg/include/common/inc/cutil.h"
+      - "/usr/pkg/common/inc/cutil.h"
+      - "/opt/include/x86_64-linux-gnu/common/inc/cutil.h"
+      - "/opt/include/common/inc/cutil.h"
+      - "/opt/common/inc/cutil.h"
+      - "/usr/include/X11/common/inc/cutil.h"
+      - "/Developer/GPU Computing/C/common/inc/cutil.h"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/root/.cursor-server/bin/8c95649f251a168cc4bb34c89531fae7db4bd990/bin/remote-cli"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/opt/conda/bin"
+        - "/usr/local/nvidia/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/conda/lib/python3.11/site-packages/cmake/data"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...
