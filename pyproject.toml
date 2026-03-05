@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel", "scikit-build", "pybind11", "cmake"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cuda-akaze"
+version = "0.1.0"
+description = "CUDA-AKAZE: keypoint detection, descriptor computation, and matching"
+requires-python = ">=3.7"
+
+[tool.setuptools.packages]
+find = {}
