@@ -1683,6 +1683,8 @@ namespace akaze
 	{
 		__shared__ float resx[42], resy[42];
 		__shared__ float re8x[42], re8y[42];
+		__shared__ float s_dx[208], s_dy[208];
+		__shared__ int s_a[208];
 		int pi = blockIdx.x;
 		int tix = threadIdx.x;
 
@@ -1691,6 +1693,9 @@ namespace akaze
 			resx[tix] = 0.f;
 			resy[tix] = 0.f;
 		}
+		s_dx[tix] = 0.f;
+		s_dy[tix] = 0.f;
+		s_a[tix] = -1;
 		__syncthreads();
 
 		int* osizes = d_oparams;
@@ -1717,8 +1722,23 @@ namespace akaze
 			float dy = gweight * dyd[pos];
 			float angle = atan2(dy, dx);
 			int a = max(min((int)(angle * (21 / M_PI)) + 21, 41), 0);
-			atomicAdd(resx + a, dx);
-			atomicAdd(resy + a, dy);
+			s_dx[tix] = dx;
+			s_dy[tix] = dy;
+			s_a[tix] = a;
+		}
+		__syncthreads();
+
+		/* Block reduction: deterministic sum by bin (fixed iteration order for reproducibility) */
+		if (tix < 42)
+		{
+			for (int k = 0; k < 208; k++)
+			{
+				if (s_a[k] == tix)
+				{
+					resx[tix] += s_dx[k];
+					resy[tix] += s_dy[k];
+				}
+			}
 		}
 		__syncthreads();
 
@@ -3702,6 +3722,8 @@ namespace fastakaze
 	{
 		__shared__ float resx[42], resy[42];
 		__shared__ float re8x[42], re8y[42];
+		__shared__ float s_dx[208], s_dy[208];
+		__shared__ int s_a[208];
 		int pi = blockIdx.x;
 		int tix = threadIdx.x;
 
@@ -3710,6 +3732,9 @@ namespace fastakaze
 			resx[tix] = 0.f;
 			resy[tix] = 0.f;
 		}
+		s_dx[tix] = 0.f;
+		s_dy[tix] = 0.f;
+		s_a[tix] = -1;
 		__syncthreads();
 
 		int* osizes = d_oparams;
@@ -3736,8 +3761,23 @@ namespace fastakaze
 			float dy = gweight * dyd[pos];
 			float angle = dFastAtan2(dy, dx);
 			int a = max(min((int)(angle * (21 / M_PI)) + 21, 41), 0);
-			atomicAdd(resx + a, dx);
-			atomicAdd(resy + a, dy);
+			s_dx[tix] = dx;
+			s_dy[tix] = dy;
+			s_a[tix] = a;
+		}
+		__syncthreads();
+
+		/* Block reduction: deterministic sum by bin (fixed iteration order for reproducibility) */
+		if (tix < 42)
+		{
+			for (int k = 0; k < 208; k++)
+			{
+				if (s_a[k] == tix)
+				{
+					resx[tix] += s_dx[k];
+					resy[tix] += s_dy[k];
+				}
+			}
 		}
 		__syncthreads();
 
