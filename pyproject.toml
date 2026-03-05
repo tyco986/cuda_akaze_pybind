@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=42", "scikit-build>=0.16", "pybind11>=2.10", "numpy", "cmake"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cuda-akaze"
+version = "0.1.0"
+description = "CUDA-accelerated AKAZE feature detection and matching"
+requires-python = ">=3.8"
+license = "MIT"
+dependencies = ["numpy"]
