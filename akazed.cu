@@ -1,6 +1,9 @@
 #include "akazed.h"
 #include <device_launch_parameters.h>
 #include <memory>
+#include <thrust/sort.h>
+#include <thrust/execution_policy.h>
+#include <thrust/device_ptr.h>
 
 
 #define X1 256
@@ -2647,6 +2650,23 @@ namespace akaze
 #endif // LOG_TIME
 
 		CheckMsg("hNmsR() execution failed\n");
+	}
+
+
+	struct AkazePointCompare
+	{
+		__host__ __device__ bool operator()(const AkazePoint& a, const AkazePoint& b) const
+		{
+			if (a.y != b.y) return a.y < b.y;
+			return a.x < b.x;
+		}
+	};
+
+	void sortAkazePoints(AkazePoint* d_points, int num_pts)
+	{
+		if (num_pts <= 0) return;
+		thrust::device_ptr<AkazePoint> ptr(d_points);
+		thrust::sort(thrust::device, ptr, ptr + num_pts, AkazePointCompare());
 	}
 
 

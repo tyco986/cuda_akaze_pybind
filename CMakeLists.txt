@@ -53,3 +53,11 @@ set_target_properties(cuakaze PROPERTIES
 )
 
 target_link_libraries(cuakaze ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
+
+# Reproducibility test executable (single run, outputs to file)
+set(repro_sources repro_test.cpp)
+cuda_add_executable(repro_test ${cuda_sources} ${repro_sources} OPTIONS -arch=sm_75)
+set_target_properties(repro_test PROPERTIES COMPILE_FLAGS "${EXTRA_CXX_FLAGS}")
+target_link_libraries(repro_test ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
+
+# Debug build option: -DCMAKE_BUILD_TYPE=Debug for GDB

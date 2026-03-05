@@ -450,6 +450,9 @@ namespace akaze
 		CHECK(cudaMemcpy(&result.num_pts, d_point_counter_addr, sizeof(unsigned int), cudaMemcpyDeviceToHost));
 		result.num_pts = MIN(result.num_pts, result.max_pts);
 
+		// Sort keypoints by (y, x) for deterministic output (reproducibility fix)
+		sortAkazePoints(result.d_data, result.num_pts);
+
 		// Refine points
 		setOparam(osizes, 5 * noctaves + 1);
 		hRefine(result, tmem, noctaves, max_scale);
@@ -736,6 +739,9 @@ namespace akaze
 		fastakaze::hNmsR(result.d_data, response_map, size_map, layer_map, (int)psz, neigh, owhps[0].x, owhps[0].y, owhps[0].z);
 		CHECK(cudaMemcpy(&result.num_pts, d_point_counter_addr, sizeof(unsigned int), cudaMemcpyDeviceToHost));
 		result.num_pts = MIN(result.num_pts, result.max_pts);
+
+		// Sort keypoints by (y, x) for deterministic output (reproducibility fix)
+		sortAkazePoints(result.d_data, result.num_pts);
 
 		// Refine points
 		setOparam(osizes, 5 * noctaves + 1);

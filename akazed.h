@@ -64,6 +64,9 @@ namespace akaze
 	void hNms(AkazePoint* points, float* response_map, float* size_map, int* layer_map, int psz, int width, int height, int pitch);
 	void hNmsR(AkazePoint* points, float* response_map, float* size_map, int* layer_map, int psz, int neigh, int width, int height, int pitch);
 
+	/* Sort keypoints by (y, x) for deterministic output order (reproducibility) */
+	void sortAkazePoints(AkazePoint* d_points, int num_pts);
+
 	/* Refine points */
 	void hRefine(AkazeData& result, float* tmem, int noctaves, int max_scale);
 
