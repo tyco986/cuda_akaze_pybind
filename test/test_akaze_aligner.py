@@ -71,9 +71,8 @@ def main():
     )
     args = parser.parse_args()
 
-    script_dir = Path(__file__).resolve().parent
-    image_path = script_dir / args.image
-    template_path = script_dir / args.template
+    image_path = Path(args.image).resolve()
+    template_path = Path(args.template).resolve()
 
     if not image_path.exists():
         raise FileNotFoundError(f"Image not found: {image_path}")

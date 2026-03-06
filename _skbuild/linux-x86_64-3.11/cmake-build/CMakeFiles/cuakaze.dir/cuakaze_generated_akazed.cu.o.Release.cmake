@@ -55,12 +55,12 @@ if(NOT generated_file)
 endif()
 
 # Set these up as variables to make reading the generated file easier
-set(CMAKE_COMMAND "/tmp/pip-build-env-m1ck5av7/overlay/lib/python3.11/site-packages/cmake/data/bin/cmake") # path
+set(CMAKE_COMMAND "/tmp/pip-build-env-3gjrmury/overlay/lib/python3.11/site-packages/cmake/data/bin/cmake") # path
 set(source_file "/workspace/cuda_akaze_pybind/akazed.cu") # path
 set(NVCC_generated_dependency_file "/workspace/cuda_akaze_pybind/_skbuild/linux-x86_64-3.11/cmake-build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.NVCC-depend") # path
 set(cmake_dependency_file "/workspace/cuda_akaze_pybind/_skbuild/linux-x86_64-3.11/cmake-build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.depend") # path
-set(CUDA_make2cmake "/tmp/pip-build-env-m1ck5av7/overlay/lib/python3.11/site-packages/cmake/data/share/cmake-4.2/Modules/FindCUDA/make2cmake.cmake") # path
-set(CUDA_parse_cubin "/tmp/pip-build-env-m1ck5av7/overlay/lib/python3.11/site-packages/cmake/data/share/cmake-4.2/Modules/FindCUDA/parse_cubin.cmake") # path
+set(CUDA_make2cmake "/tmp/pip-build-env-3gjrmury/overlay/lib/python3.11/site-packages/cmake/data/share/cmake-4.2/Modules/FindCUDA/make2cmake.cmake") # path
+set(CUDA_parse_cubin "/tmp/pip-build-env-3gjrmury/overlay/lib/python3.11/site-packages/cmake/data/share/cmake-4.2/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "") # path
 # We won't actually use these variables for now, but we need to set this, in

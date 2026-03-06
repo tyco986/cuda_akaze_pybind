@@ -1,13 +1,18 @@
 """
-AKAZE CUDA aligner: A-KAZE features + match + findHomography(RANSAC).
+AKAZE CUDA aligner: A-KAZE features + match + RANSAC homography (skimage).
 Feature-based homography alignment using GPU-accelerated A-KAZE.
 """
 
 import numpy as np
-import cv2
 from typing import Dict, Tuple
 
+from skimage.transform import ProjectiveTransform
+from skimage.measure import ransac
+
 from ._cuda_akaze import Akazer, init_device, match
+
+# Fixed seed for reproducible RANSAC
+RANSAC_SEED = 42
 
 # NNDR threshold for match filtering (ratio of best to second-best distance)
 DRATIO = 0.80
@@ -72,7 +77,7 @@ def _nndr_filter(
 
 class AkazeAligner:
     """
-    AKAZE CUDA: GPU-accelerated A-KAZE features + match + findHomography(RANSAC).
+    AKAZE CUDA: GPU-accelerated A-KAZE features + match + RANSAC homography (skimage).
     Feature-based homography alignment using _cuda_akaze (Akazer, match).
     All Akazer parameters are exposed and passed to the detector.
     """
@@ -171,18 +176,22 @@ class AkazeAligner:
             return np.eye(3, dtype=np.float32), np.zeros(2, dtype=np.float32)
 
         m = matches[valid]
-        pts0 = kpts_t[m[:, 0], :2].astype(np.float32)
-        pts1 = kpts_i[m[:, 1], :2].astype(np.float32)
+        pts0 = kpts_t[m[:, 0], :2].astype(np.float64)
+        pts1 = kpts_i[m[:, 1], :2].astype(np.float64)
 
-        H, status = cv2.findHomography(
-            pts0, pts1,
-            cv2.RANSAC,
-            ransacReprojThreshold=self.ransac_thresh,
-            maxIters=self.ransac_max_iters,
-            confidence=self.ransac_confidence,
+        rng = np.random.default_rng(RANSAC_SEED)
+        model, inliers = ransac(
+            (pts0, pts1),
+            ProjectiveTransform,
+            min_samples=4,
+            residual_threshold=self.ransac_thresh,
+            max_trials=self.ransac_max_iters,
+            stop_probability=self.ransac_confidence,
+            rng=rng,
         )
-        if H is None:
+        if model is None or not model:
             return np.eye(3, dtype=np.float32), np.zeros(2, dtype=np.float32)
+        H = model.params
         return H.astype(np.float32), H[:2, 2]
 
     def find_transform(self, template, input_image) -> Dict:

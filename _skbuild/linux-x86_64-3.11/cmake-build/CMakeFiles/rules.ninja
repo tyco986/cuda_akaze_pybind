@@ -63,7 +63,7 @@ rule CXX_COMPILER__akaze_core_unscanned_Release
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__akaze_core_Release
-  command = $PRE_LINK && /tmp/pip-build-env-m1ck5av7/overlay/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && /tmp/pip-build-env-3gjrmury/overlay/lib/python3.11/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -99,7 +99,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /tmp/pip-build-env-m1ck5av7/overlay/lib/python3.11/site-packages/cmake/data/bin/cmake --regenerate-during-build -S/workspace/cuda_akaze_pybind -B/workspace/cuda_akaze_pybind/_skbuild/linux-x86_64-3.11/cmake-build
+  command = /tmp/pip-build-env-3gjrmury/overlay/lib/python3.11/site-packages/cmake/data/bin/cmake --regenerate-during-build -S/workspace/cuda_akaze_pybind -B/workspace/cuda_akaze_pybind/_skbuild/linux-x86_64-3.11/cmake-build
   description = Re-running CMake...
   generator = 1
 
