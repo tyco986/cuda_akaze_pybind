@@ -62,6 +62,12 @@ cuda_add_executable(repro_test ${cuda_sources} ${repro_sources} OPTIONS -arch=sm
 set_target_properties(repro_test PROPERTIES COMPILE_FLAGS "${EXTRA_CXX_FLAGS}")
 target_link_libraries(repro_test ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
 
+# Standalone gHammingMatch test - loads saved inputs, runs kernel only
+cuda_add_executable(test_gHammingMatch test_gHammingMatch.cu cuda_utils.h akaze_structures.h OPTIONS -arch=sm_75)
+set_target_properties(test_gHammingMatch PROPERTIES COMPILE_FLAGS "${EXTRA_CXX_FLAGS}")
+target_include_directories(test_gHammingMatch PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(test_gHammingMatch ${CUDA_cudadevrt_LIBRARY})
+
 # Debug build option: -DCMAKE_BUILD_TYPE=Debug for GDB
 
 # Python module (pybind11 + scikit-build)

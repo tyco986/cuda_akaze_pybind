@@ -1,0 +1,2 @@
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-install/cuda_akaze/./_cuda_akaze.cpython-310-x86_64-linux-gnu.so
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-install/cuda_akaze/./__init__.py

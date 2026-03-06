@@ -1,0 +1,12 @@
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/cuakaze.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/repro_test.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/akaze_core.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/_cuda_akaze.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/package.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/package_source.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/edit_cache.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/rebuild_cache.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/list_install_components.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/install.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/install/local.dir
+/root/project/cuda_akaze_pybind/_skbuild/linux-x86_64-3.10/cmake-build/CMakeFiles/install/strip.dir

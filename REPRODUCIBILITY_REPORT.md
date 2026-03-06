@@ -1,53 +1,164 @@
 # 可重复性测试报告 (Reproducibility Test Report)
 
-## 测试结果摘要
+> **新 Agent 上下文恢复**：本文档包含完整排查历程与当前状态。新 Agent 请先阅读「快速上下文」和「当前待办」，再按需查阅各章节。
 
-**结论: 检测到可重复性问题**
+---
 
-- `num_pts` 在两次运行中**一致** (3631)
-- 关键点**集合**相同，但**顺序**在两次运行中**不一致**
-- 相同的关键点 (x, y, 特征等) 出现在两次运行中，但索引位置不同
+## 快速上下文 (Quick Context for New Agent)
 
-## 输出不一致的函数 (粗定位)
+### 项目
+- **cuda_akaze_pybind**：基于 CUDA 的 AKAZE 特征检测与匹配
+- **问题**：32 次完整 pipeline 运行后，match/dist 结果不一致
 
-根据测试和代码分析，以下函数导致输出顺序不一致：
+### 当前状态一览
 
-### 1. **gNmsRNaive** (CUDA kernel) - 主要根源
-- **位置**: `akazed.cu` 约 1568 行 (akaze 命名空间)
-- **原因**: 使用 `atomicInc(&d_point_counter, 0x7fffffff)` 分配输出索引
-- **说明**: 多个线程并行发现局部极大值时，通过原子操作竞争获取写入槽位，执行顺序非确定性，导致关键点写入顺序随运行变化
+| 项目 | 状态 | 说明 |
+|------|------|------|
+| 检测阶段 (detectAndCompute) | ✅ 已解决 | x, y, octave, response, size, angle 及描述子 32 次完全一致 |
+| gHammingMatch 入参 | ✅ 已确认一致 | 32 次完整运行中，传给 gHammingMatch 的 points1/points2 完全相同 |
+| gHammingMatch 本身 | ✅ 已确认确定 | 隔离测试：同一份 match_input.bin 在 32 个独立进程中运行 → 输出完全一致 |
+| 匹配阶段 (cuMatch 输出) | ❌ 待解决 | match/dist 在 32 次运行间有差异 |
+| **根因** | **运行时状态污染** | path 1、path 2 在 path 3 之前执行，其 GPU 状态影响 path 3 的 gHammingMatch 行为 |
 
-### 2. **hNmsR** (Host 函数)
-- **位置**: `akazed.cu` 约 2629 行
-- **原因**: 调用 `gNmsRNaive` kernel，其输出顺序由 kernel 决定
+### 关键结论
+- **问题不在** gHammingMatch 算法或上游输入顺序（两者均已排除）
+- **问题在** path 1/2 的 GPU 状态污染 path 3 的 gHammingMatch 执行环境
 
-### 3. **gNmsR** (CUDA kernel，当前未使用)
-- **位置**: `akazed.cu` 约 1446 行
-- **说明**: 注释中显示已被 gNmsRNaive 替代，同样使用 `atomicInc` (约 1435 行)
+### 当前待办 (Next Steps)
+1. **Compute Sanitizer**：在新 Docker 容器中运行（需 `--cap-add=SYS_ADMIN --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --privileged`），定位未初始化内存或数据竞争
+2. **若 Compute Sanitizer 可用**：根据报告定位污染源（buffer、kernel、行号）
+3. **备选修复**：在 path 3 的 cuMatch 前显式重置 GPU 状态（如 `cudaDeviceSynchronize`、`cudaMemset` 未使用 buffer），或使 path 3 在单独进程/`cudaDeviceReset` 后运行
 
-### 4. **gCalcOrient** (CUDA kernel) - 可能影响
-- **位置**: `akazed.cu` 约 1715-1718 行
-- **原因**: 使用 `atomicAdd` 累加方向直方图，可能影响角度计算的一致性
-- **说明**: 若仅关注关键点顺序，主要问题在 NMS；若角度也有差异，需检查此处
+### 关键文件
+| 文件 | 用途 |
+|------|------|
+| `repro_test.cpp` | 完整 repro 测试，支持 `--dump-match-input` 和第二个参数 dump path 3 的 match 入参 |
+| `run_reproducibility_test.sh` | 32 次 repro_test，比较入参和输出，并做 gHammingMatch 隔离测试 |
+| `run_match_repro_test.sh` | 32 次 dump 入参并比较 |
+| `run_compute_sanitizer.sh` | 调用 Compute Sanitizer（initcheck/racecheck/memcheck） |
+| `test_gHammingMatch.cu` | gHammingMatch 独立测试 |
+| `akazed.cu` | gHammingMatch 约 2170 行，使用 `__shared__` 数组 |
 
-## 其他使用原子操作的函数 (潜在影响)
+---
 
-| 函数 | 原子操作 | 影响 |
+## 测试结果摘要 (32 次运行)
+
+| 阶段 | 状态 | 说明 |
+|------|------|------|
+| 检测 (detectAndCompute / fastDetectAndCompute) | ✅ 已解决 | x, y, octave, response, size, angle 及描述子 32 次完全一致 |
+| 匹配 (cuMatch) | ❌ 待解决 | match、dist 字段在不同运行间有差异 |
+
+---
+
+## 已排除的假设 (Resolved / Ruled Out)
+
+### ✅ 假设 1：gHammingMatch 本身非确定
+- **验证**：用同一份 `match_input.bin` 在 32 个独立进程中运行 `test_gHammingMatch` → 输出**完全一致**
+- **结论**：gHammingMatch 在相同输入下是确定的
+
+### ✅ 假设 2：上游输入（关键点顺序）在多次运行间不同
+- **验证**：32 次完整 repro_test 中，path 3 的 cuMatch 前 dump 的 gHammingMatch 入参（points1、points2 等）**完全一致**
+- **结论**：上游输入已排除，问题不在关键点顺序
+
+### ✅ 假设 3：CUDA kernel 启动调度导致非确定性
+- **验证**：已测试 `CUDA_LAUNCH_BLOCKING=1`，32 次运行仍不一致
+- **结论**：排除 kernel 启动调度，问题在 kernel 内部逻辑或 GPU 状态
+
+---
+
+## 当前根因：运行时状态污染
+
+### 现象
+- **完整 4 路径场景**：path 1、path 2、path 3、path 4 依次执行
+- **path 3 的 gHammingMatch**：入参 32 次一致，但输出 32 次不一致
+- **隔离场景**：仅运行 path 3 的 gHammingMatch（无 path 1/2 干扰）→ 输出 32 次一致
+
+### 结论
+path 1、path 2 在 path 3 之前执行，其 GPU 状态（如 shared memory、寄存器残留、L2 缓存等）影响 path 3 的 gHammingMatch 行为。
+
+### 数据流
+```
+path 1, path 2 执行 → GPU 状态被修改
+    ↓
+path 3: detectAndCompute (输入一致) → cuMatch → gHammingMatch
+    ↓
+gHammingMatch 收到相同的 points1/points2，但受 path 1/2 残留状态影响 → 输出不一致
+```
+
+---
+
+## Compute Sanitizer 排查
+
+### 目的
+用 NVIDIA Compute Sanitizer 检测未初始化内存、数据竞争，定位污染源。
+
+### 当前限制
+- 在 Docker + WSL2 中运行时报：`Device not supported`、`Failed to initialize WDDM debugger interface`
+- 可能原因：容器缺少调试所需权限
+
+### Docker 新容器启动参数（建议）
+```bash
+docker run -it --gpus all \
+  --cap-add=SYS_ADMIN \
+  --cap-add=SYS_PTRACE \
+  --security-opt seccomp=unconfined \
+  --privileged \
+  <镜像名> \
+  /bin/bash
+```
+
+### 使用方式
+```bash
+# 未初始化内存检测
+./run_compute_sanitizer.sh initcheck
+
+# 共享内存数据竞争检测
+./run_compute_sanitizer.sh racecheck
+
+# 内存访问错误检测
+./run_compute_sanitizer.sh memcheck
+```
+
+### 新版 CUDA
+支持 `--initcheck-address-space shared` 检查 shared memory（gHammingMatch 使用 `__shared__` 数组）。
+
+---
+
+## 历史记录：检测阶段 (已解决)
+
+以下问题已通过 `sortAkazePoints` 等修复解决，检测阶段当前可重复。
+
+### gNmsRNaive (akaze 命名空间)
+- **位置**: `akazed.cu` 约 1568 行
+- **原因**: `atomicInc(&d_point_counter, 0x7fffffff)` 导致关键点写入顺序非确定性
+- **状态**: ✅ 已解决
+
+### fastakaze::gNmsRNaive
+- 同上，Fast 版本存在相同顺序问题
+- **状态**: ✅ 已解决
+
+### 其他使用原子操作的函数（检测路径，当前输出稳定）
+| 函数 | 原子操作 | 说明 |
 |------|----------|------|
-| gScharrContrast / 相关 kernel | atomicMax | 影响 kcontrast |
-| gCalcExtremaMap 相关 | atomicAdd (直方图) | 可能影响阈值 |
-| fastakaze::gNmsRNaive | atomicInc | Fast 版本同样存在顺序问题 |
+| gScharrContrast 相关 | atomicMax | 影响 kcontrast，当前输出稳定 |
+| gCalcExtremaMap 相关 | atomicAdd | 直方图累加，当前输出稳定 |
+| gCalcOrient | atomicAdd | 方向直方图，当前输出稳定 |
 
-## 修复建议
+---
 
-1. **对关键点排序**: 在 `hNmsR` 返回后或 `detectAndCompute` 结束前，按 (x, y) 或 (octave, response) 等对关键点排序，使输出顺序确定
-2. **替代 atomicInc**: 使用两阶段方法——先收集候选，再顺序写入，避免原子竞争
-3. **固定随机性**: 若存在其他非确定性来源，考虑固定 CUDA 随机数种子或执行策略
+## 修复建议（匹配阶段，待实施）
+
+1. **Compute Sanitizer 定位**：在新容器中运行 initcheck/racecheck，根据报告定位污染 buffer 或 kernel
+2. **显式重置 GPU 状态**：在 path 3 的 cuMatch 之前，`cudaDeviceSynchronize`、`cudaMemset` 未使用 buffer
+3. **隔离 path 3**：使 path 3 在单独进程或 `cudaDeviceReset` 后运行，验证是否消除污染
+4. **gHammingMatch 内部**：若 Compute Sanitizer 发现 shared memory 问题，检查 `__shared__` 数组的初始化与使用
+
+---
 
 ## 测试脚本使用
 
 ```bash
-# 运行完整可重复性测试
+# 运行完整可重复性测试（32 次，含入参比较与隔离测试）
 ./run_reproducibility_test.sh
 
 # 仅运行两次并比较 (无 GDB)
@@ -56,7 +167,28 @@
 diff repro_results/run1_dump.txt repro_results/run2_dump.txt
 ```
 
+### gHammingMatch 独立测试
+```bash
+# 方式 A：run_reproducibility_test.sh 已包含隔离测试（用 run1_match_input.bin 跑 32 次 test_gHammingMatch）
+./run_reproducibility_test.sh
+
+# 方式 B：run_match_repro_test.sh 单独跑（Phase 1 生成 32 份 match_input，Phase 3 用 match_input_1.bin 跑 32 次 test_gHammingMatch）
+./run_match_repro_test.sh repro_results
+
+# 方式 C：手动隔离测试（需先有 match_input.bin）
+./build/repro_test repro_results/dump.txt repro_results/match_input.bin   # 生成 match_input.bin
+for i in $(seq 1 32); do ./build/test_gHammingMatch repro_results/match_input.bin repro_results/iso_${i}.txt; done
+diff repro_results/iso_1.txt repro_results/iso_2.txt   # 验证 32 次输出一致
+```
+
+---
+
 ## 输出文件
 
-- `repro_results/run1_dump.txt`, `run2_dump.txt`: 完整检测输出
-- `repro_results/run1_checkpoints.txt`, `run2_checkpoints.txt`: GDB 断点追踪 (num_pts 等)
+| 文件 | 说明 |
+|------|------|
+| `repro_results/run*_dump.txt` | 完整检测输出 |
+| `repro_results/run*_match_input.bin` | path 3 的 gHammingMatch 入参（用于比较与隔离测试） |
+| `repro_results/isolate_run*.txt` | gHammingMatch 隔离测试输出（32 次独立进程，无 path 1/2 干扰） |
+| `repro_results/run*_checkpoints.txt` | GDB 断点追踪 (num_pts 等) |
+| `repro_results/run*_stdout.txt` | 每次运行的 stdout |

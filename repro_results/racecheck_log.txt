@@ -1,0 +1,9 @@
+========= COMPUTE-SANITIZER
+========= Error: Failed to initialize WDDM debugger interface. Please run EnableDebuggerInterface.bat as an administrator
+========= 
+========= Error: Device not supported. Please refer to the "Supported Devices" section of the sanitizer documentation
+========= 
+========= Error: process didn't terminate successfully
+=========     The application may have hit an error when dereferencing Unified Memory from the host. Please rerun the application under cuda-gdb or a host debugger to catch host side errors.
+========= Target application returned an error
+========= RACECHECK SUMMARY: 2 hazards displayed (2 errors, 0 warnings)

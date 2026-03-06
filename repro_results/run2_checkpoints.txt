@@ -1,1 +1,2 @@
-CHECKPOINT after_hNmsR: num_pts=3631
+detectAndCompute (float): num_pts=3631
+fastDetectAndCompute (uchar): num_pts=3798
