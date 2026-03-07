@@ -1,6 +1,6 @@
 #!/bin/bash
-# Path order tests: path_order_inv (path 3 first) and path3_only
-# Confirms whether pollution comes from path 1/2
+# Path order tests: path_order_inv (path 3 first), path3_only, path4_only
+# Confirms whether pollution comes from path 1/2; path4_only verifies path 4 cuMatch in isolation
 
 set -e
 NUM_RUNS=32
@@ -17,21 +17,21 @@ echo ""
 mkdir -p "$OUTPUT_DIR_ABS"
 
 # Build
-echo "[1/4] Building repro_test..."
+echo "[1/5] Building repro_test..."
 cd "$SCRIPT_DIR/$BUILD_DIR"
 make -j$(nproc) repro_test 2>/dev/null || make repro_test
 cd "$SCRIPT_DIR"
 echo ""
 
 # Test 1: path_order_inv (path 3 runs FIRST, before path 1/2)
-echo "[2/4] Running path_order_inv $NUM_RUNS times (path 3 first, no path 1/2 pollution)..."
+echo "[2/5] Running path_order_inv $NUM_RUNS times (path 3 first, no path 1/2 pollution)..."
 for i in $(seq 1 $NUM_RUNS); do
     $REPRO_BIN "$OUTPUT_DIR_ABS/inv_run${i}_dump.txt" "$OUTPUT_DIR_ABS/inv_run${i}_match.bin" "path_order_inv" 2>/dev/null | tail -5 || true
 done
 echo ""
 
 # Compare path_order_inv outputs
-echo "[3/4] Comparing path_order_inv outputs..."
+echo "[3/5] Comparing path_order_inv outputs..."
 INV_IDENTICAL=true
 REF_INV="$OUTPUT_DIR_ABS/inv_run1_dump.txt"
 for i in $(seq 2 $NUM_RUNS); do
@@ -50,7 +50,7 @@ fi
 echo ""
 
 # Test 2: path3_only (only path 3, no path 1/2/4)
-echo "[4/4] Running path3_only $NUM_RUNS times..."
+echo "[4/5] Running path3_only $NUM_RUNS times..."
 for i in $(seq 1 $NUM_RUNS); do
     $REPRO_BIN "$OUTPUT_DIR_ABS/p3only_run${i}_dump.txt" "" "path3_only" 2>/dev/null | tail -3 || true
 done
@@ -75,8 +75,35 @@ else
 fi
 echo ""
 
+# Test 3: path4_only (only path 4, no path 1/2/3)
+echo "[5/5] Running path4_only $NUM_RUNS times..."
+for i in $(seq 1 $NUM_RUNS); do
+    $REPRO_BIN "$OUTPUT_DIR_ABS/p4only_run${i}_dump.txt" "" "path4_only" 2>/dev/null | tail -3 || true
+done
+echo ""
+
+# Compare path4_only outputs
+echo "Comparing path4_only outputs..."
+P4ONLY_IDENTICAL=true
+REF_P4="$OUTPUT_DIR_ABS/p4only_run1_dump.txt"
+for i in $(seq 2 $NUM_RUNS); do
+    F="$OUTPUT_DIR_ABS/p4only_run${i}_dump.txt"
+    if [ ! -f "$F" ] || ! diff -q "$REF_P4" "$F" >/dev/null 2>&1; then
+        P4ONLY_IDENTICAL=false
+        echo "*** path4_only run $i DIFFERS from run 1 ***"
+        [ -f "$F" ] && diff "$REF_P4" "$F" | head -15
+    fi
+done
+if $P4ONLY_IDENTICAL; then
+    echo "*** path4_only: All $NUM_RUNS outputs IDENTICAL - path 4 alone is deterministic ***"
+else
+    echo "*** path4_only: Some outputs DIFFER ***"
+fi
+echo ""
+
 echo "===== Summary ====="
 echo "path_order_inv (path 3 first): $($INV_IDENTICAL && echo "IDENTICAL" || echo "DIFFER")"
 echo "path3_only (path 3 only):      $($P3ONLY_IDENTICAL && echo "IDENTICAL" || echo "DIFFER")"
+echo "path4_only (path 4 only):      $($P4ONLY_IDENTICAL && echo "IDENTICAL" || echo "DIFFER")"
 echo ""
-echo "Output files: $OUTPUT_DIR/inv_run*_dump.txt, $OUTPUT_DIR/p3only_run*_dump.txt"
+echo "Output files: $OUTPUT_DIR/inv_run*_dump.txt, $OUTPUT_DIR/p3only_run*_dump.txt, $OUTPUT_DIR/p4only_run*_dump.txt"

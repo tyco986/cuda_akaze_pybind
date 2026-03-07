@@ -55,6 +55,7 @@ namespace akaze
 
 	void cuMatch(AkazeData& result1, AkazeData& result2)
 	{
+		CHECK(cudaDeviceSynchronize());  /* ensure detectAndCompute kernels complete before gHammingMatch */
 		hMatch(result1, result2);
 		if (result1.h_data)
 		{

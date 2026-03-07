@@ -1,6 +1,6 @@
 [detectAndCompute_float_desc_checksum] pt0_h=4060997354 pt1_h=2654209239 pt2_h=3810936094 pt3_h=3105892460 pt4_h=3472837676 pt2_0_h=2292965912 pt2_1_h=3870056930 pt2_2_h=1056786328 pt2_3_h=4094696131 pt2_4_h=1348790151 
 [detectAndCompute_float_match1] num_pts=3631 max_pts=10000
-  pt0: x=865.809 y=30.4127 octave=0 response=0 size=2.4 angle=3.19395 match=18 dist=42
+  pt0: x=865.809 y=30.4127 octave=0 response=0 size=2.4 angle=3.19395 match=18 dist=54
   pt1: x=917.857 y=30.3311 octave=0 response=0 size=2.4 angle=6.17188 match=-1 dist=-1
   pt2: x=1071.98 y=32.1033 octave=0 response=0 size=2.4 angle=2.98864 match=-1 dist=-1
   pt3: x=1210.04 y=33.4152 octave=0 response=0 size=2.4 angle=6.1286 match=134 dist=50
@@ -14,7 +14,7 @@
   pt11: x=1116.45 y=39.6718 octave=0 response=0 size=2.4 angle=3.28737 match=126 dist=21
   pt12: x=911.844 y=41.0195 octave=0 response=0 size=2.4 angle=6.27314 match=-1 dist=-1
   pt13: x=634.991 y=42.8145 octave=1 response=0 size=2.8541 angle=3.15931 match=-1 dist=-1
-  pt14: x=908.65 y=46.3604 octave=0 response=0 size=2.4 angle=2.96428 match=75 dist=15
+  pt14: x=908.65 y=46.3604 octave=0 response=0 size=2.4 angle=2.96428 match=75 dist=30
   pt15: x=1162.08 y=46.0487 octave=0 response=0 size=2.4 angle=4.81296 match=175 dist=48
   pt16: x=1212.1 y=48.8528 octave=1 response=0 size=2.8541 angle=3.1505 match=-1 dist=-1
   pt17: x=882.712 y=49.9252 octave=1 response=0 size=2.8541 angle=3.22405 match=77 dist=26
@@ -28,8 +28,8 @@
   pt25: x=1016.32 y=56.2338 octave=1 response=0 size=2.8541 angle=0.11001 match=-1 dist=-1
   pt26: x=913.824 y=58.5242 octave=1 response=0 size=2.8541 angle=3.04255 match=132 dist=16
   pt27: x=678.792 y=59.0076 octave=3 response=0 size=4.0363 angle=3.20377 match=-1 dist=-1
-  pt28: x=1039.78 y=58.9525 octave=0 response=0 size=2.4 angle=3.13019 match=181 dist=31
-  pt29: x=1055.09 y=58.9137 octave=3 response=0 size=4.0363 angle=3.17028 match=190 dist=14
+  pt28: x=1039.78 y=58.9525 octave=0 response=0 size=2.4 angle=3.13019 match=181 dist=45
+  pt29: x=1055.09 y=58.9137 octave=3 response=0 size=4.0363 angle=3.17028 match=190 dist=28
   pt30: x=1189.4 y=59.3792 octave=0 response=0 size=2.4 angle=0.169233 match=241 dist=80
   pt31: x=573.343 y=62.257 octave=3 response=0 size=4.0363 angle=3.19711 match=-1 dist=-1
   pt32: x=635.138 y=62.7696 octave=0 response=0 size=2.4 angle=0.123409 match=47 dist=40
@@ -42,7 +42,7 @@
   pt39: x=917.605 y=67.0156 octave=1 response=0 size=2.8541 angle=3.09164 match=173 dist=16
   pt40: x=1234.66 y=67.2013 octave=0 response=0 size=2.4 angle=0.167136 match=301 dist=43
   pt41: x=938.125 y=67.8482 octave=3 response=0 size=4.0363 angle=0.0393799 match=-1 dist=-1
-  pt42: x=1062.88 y=68.372 octave=0 response=0 size=2.4 angle=6.25431 match=228 dist=40
+  pt42: x=1062.88 y=68.372 octave=0 response=0 size=2.4 angle=6.25431 match=228 dist=54
   pt43: x=1212.86 y=67.728 octave=3 response=0 size=4.0363 angle=3.07781 match=-1 dist=-1
   pt44: x=563.656 y=68.9729 octave=3 response=0 size=4.0363 angle=3.22672 match=-1 dist=-1
   pt45: x=1235.98 y=68.9775 octave=1 response=0 size=2.8541 angle=0.140803 match=-1 dist=-1

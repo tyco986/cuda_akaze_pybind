@@ -173,7 +173,7 @@ int main(int argc, char** argv) {
 
     const char* outfile = (argc > 1) ? argv[1] : "run_dump.txt";
     const char* match_input_path = (argc > 2) ? argv[2] : nullptr;
-    /* Mode: default=full, path_order_inv=path3 first, path3_only=only path3 */
+    /* Mode: default=full, path_order_inv=path3 first, path3_only=only path3, path4_only=only path4 */
     std::string mode = (argc > 3) ? argv[3] : "full";
     std::cout << "Reproducibility test (" << mode << "): output -> " << outfile << std::endl;
 
@@ -290,6 +290,8 @@ int main(int argc, char** argv) {
         runPath3(out, match_input_path, whp, whp2, max_npts, limg, rimg,
             noctaves, max_scale, per, kcontrast, soffset, reordering,
             derivative_factor, dthreshold, diffusivity, descriptor_pattern_size, makeDetector);
+    } else if (mode == "path4_only") {
+        runPath4();
     } else if (mode == "path_order_inv") {
         /* Path 3 first (no path 1/2 pollution), then path 1, 2, 4 */
         runPath3(out, match_input_path, whp, whp2, max_npts, limg, rimg,
