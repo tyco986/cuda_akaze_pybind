@@ -2237,15 +2237,29 @@ namespace akaze
 		flags[tid] = distance[0] < distance[tid] ? 1 : 0;
 		__syncthreads();
 
-		// Sum over
+		// Sum over (tree reduction; each step only writers participate to avoid read-write race)
 		if (tid < 8)
 		{
 			volatile int* vsmem = flags;
-			//vsmem[tid] += vsmem[tid + 16];
 			vsmem[tid] += vsmem[tid + 8];
+		}
+		__syncthreads();
+		if (tid < 4)
+		{
+			volatile int* vsmem = flags;
 			vsmem[tid] += vsmem[tid + 4];
+		}
+		__syncthreads();
+		if (tid < 2)
+		{
+			volatile int* vsmem = flags;
 			vsmem[tid] += vsmem[tid + 2];
-			vsmem[tid] += vsmem[tid + 1];
+		}
+		__syncthreads();
+		if (tid == 0)
+		{
+			volatile int* vsmem = flags;
+			vsmem[0] += vsmem[1];
 		}
 
 		// Get result
