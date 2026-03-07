@@ -1,5 +1,5 @@
-CMakeFiles/cuakaze.dir/fed.cpp.o: /root/project/cuda_akaze_pybind/fed.cpp \
- /usr/include/stdc-predef.h /root/project/cuda_akaze_pybind/fed.h \
+CMakeFiles/cuakaze.dir/fed.cpp.o: /cuda_akaze_pybind/fed.cpp \
+ /usr/include/stdc-predef.h /cuda_akaze_pybind/fed.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

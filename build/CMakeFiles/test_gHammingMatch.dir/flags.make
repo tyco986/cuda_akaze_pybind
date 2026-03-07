@@ -4,7 +4,7 @@
 # compile CUDA with /usr/local/cuda/bin/nvcc
 CUDA_DEFINES = 
 
-CUDA_INCLUDES = -I/root/project/cuda_akaze_pybind -I/usr/local/cuda/include
+CUDA_INCLUDES = -I/cuda_akaze_pybind -I/usr/local/cuda/include
 
-CUDA_FLAGS = -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler=-fPIE
+CUDA_FLAGS =  --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler=-fPIE
 

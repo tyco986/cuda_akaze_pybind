@@ -33,6 +33,7 @@ namespace akaze
 		if (dev)
 		{
 			CHECK(cudaMalloc((void**)&data.d_data, size));
+			CHECK(cudaMemset(data.d_data, 0, size));
 		}
 	}
 
@@ -226,6 +227,7 @@ namespace akaze
 		if ((reused && !omem) || !reused)
 		{
 			CHECK(cudaMalloc(addr, offsets[noctaves] * sizeof(float)));
+			CHECK(cudaMemset(*addr, 0, offsets[noctaves] * sizeof(float)));
 		}
 
 		if (reused)

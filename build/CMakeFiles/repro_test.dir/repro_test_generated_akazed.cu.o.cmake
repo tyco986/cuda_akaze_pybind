@@ -58,18 +58,18 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/root/project/cuda_akaze_pybind/akazed.cu") # path
-set(NVCC_generated_dependency_file "/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.depend") # path
+set(source_file "/cuda_akaze_pybind/akazed.cu") # path
+set(NVCC_generated_dependency_file "/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//repro_test_generated_akazed.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//repro_test_generated_akazed.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/share/cmake-3.22/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/usr/share/cmake-3.22/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//.") # path
-set(generated_file_internal "/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o") # path
-set(generated_cubin_file_internal "/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt") # path
+set(generated_file_path "/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//.") # path
+set(generated_file_internal "/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o") # path
+set(generated_cubin_file_internal "/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/usr/local/cuda/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS -lineinfo;--compiler-options;-O2;-D_FORCE_INLINES;-DVERBOSE_NOT;-Xcompiler=-fPIC ;; -arch=sm_75) # list
@@ -79,7 +79,7 @@ set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64) # list
-set(CUDA_NVCC_INCLUDE_DIRS [==[/usr/local/cuda/include;/root/project/cuda_akaze_pybind;/usr/local/cuda/include;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4]==]) # list (needs to be in lua quotes to address backslashes)
+set(CUDA_NVCC_INCLUDE_DIRS [==[/usr/local/cuda/include;/cuda_akaze_pybind;/usr/local/cuda/include;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4;/usr/local/include/opencv4]==]) # list (needs to be in lua quotes to address backslashes)
 string(REPLACE "\\" "/" CUDA_NVCC_INCLUDE_DIRS "${CUDA_NVCC_INCLUDE_DIRS}")
 set(CUDA_NVCC_COMPILE_DEFINITIONS [==[]==]) # list (needs to be in lua quotes see #16510 ).
 set(format_flag "-c") # string

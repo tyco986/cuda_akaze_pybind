@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/project/cuda_akaze_pybind
+CMAKE_SOURCE_DIR = /cuda_akaze_pybind
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/project/cuda_akaze_pybind/build
+CMAKE_BINARY_DIR = /cuda_akaze_pybind/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cuakaze.dir/depend.make
@@ -1268,53 +1268,53 @@ CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/th
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.h
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.hpp
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_types.h
-CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.Debug.cmake
+CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.cmake
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: ../akazed.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
-	cd /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -E make_directory /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//.
-	cd /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Debug -D generated_file:STRING=/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o -D generated_cubin_file:STRING=/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt -P /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.Debug.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
+	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -E make_directory /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//.
+	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.cmake
 
 CMakeFiles/cuakaze.dir/akaze.cpp.o: CMakeFiles/cuakaze.dir/flags.make
 CMakeFiles/cuakaze.dir/akaze.cpp.o: ../akaze.cpp
 CMakeFiles/cuakaze.dir/akaze.cpp.o: CMakeFiles/cuakaze.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cuakaze.dir/akaze.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cuakaze.dir/akaze.cpp.o -MF CMakeFiles/cuakaze.dir/akaze.cpp.o.d -o CMakeFiles/cuakaze.dir/akaze.cpp.o -c /root/project/cuda_akaze_pybind/akaze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cuakaze.dir/akaze.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cuakaze.dir/akaze.cpp.o -MF CMakeFiles/cuakaze.dir/akaze.cpp.o.d -o CMakeFiles/cuakaze.dir/akaze.cpp.o -c /cuda_akaze_pybind/akaze.cpp
 
 CMakeFiles/cuakaze.dir/akaze.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuakaze.dir/akaze.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/cuda_akaze_pybind/akaze.cpp > CMakeFiles/cuakaze.dir/akaze.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cuda_akaze_pybind/akaze.cpp > CMakeFiles/cuakaze.dir/akaze.cpp.i
 
 CMakeFiles/cuakaze.dir/akaze.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuakaze.dir/akaze.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/cuda_akaze_pybind/akaze.cpp -o CMakeFiles/cuakaze.dir/akaze.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cuda_akaze_pybind/akaze.cpp -o CMakeFiles/cuakaze.dir/akaze.cpp.s
 
 CMakeFiles/cuakaze.dir/fed.cpp.o: CMakeFiles/cuakaze.dir/flags.make
 CMakeFiles/cuakaze.dir/fed.cpp.o: ../fed.cpp
 CMakeFiles/cuakaze.dir/fed.cpp.o: CMakeFiles/cuakaze.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cuakaze.dir/fed.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cuakaze.dir/fed.cpp.o -MF CMakeFiles/cuakaze.dir/fed.cpp.o.d -o CMakeFiles/cuakaze.dir/fed.cpp.o -c /root/project/cuda_akaze_pybind/fed.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cuakaze.dir/fed.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cuakaze.dir/fed.cpp.o -MF CMakeFiles/cuakaze.dir/fed.cpp.o.d -o CMakeFiles/cuakaze.dir/fed.cpp.o -c /cuda_akaze_pybind/fed.cpp
 
 CMakeFiles/cuakaze.dir/fed.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuakaze.dir/fed.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/cuda_akaze_pybind/fed.cpp > CMakeFiles/cuakaze.dir/fed.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cuda_akaze_pybind/fed.cpp > CMakeFiles/cuakaze.dir/fed.cpp.i
 
 CMakeFiles/cuakaze.dir/fed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuakaze.dir/fed.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/cuda_akaze_pybind/fed.cpp -o CMakeFiles/cuakaze.dir/fed.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cuda_akaze_pybind/fed.cpp -o CMakeFiles/cuakaze.dir/fed.cpp.s
 
 CMakeFiles/cuakaze.dir/main.cpp.o: CMakeFiles/cuakaze.dir/flags.make
 CMakeFiles/cuakaze.dir/main.cpp.o: ../main.cpp
 CMakeFiles/cuakaze.dir/main.cpp.o: CMakeFiles/cuakaze.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cuakaze.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cuakaze.dir/main.cpp.o -MF CMakeFiles/cuakaze.dir/main.cpp.o.d -o CMakeFiles/cuakaze.dir/main.cpp.o -c /root/project/cuda_akaze_pybind/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cuakaze.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cuakaze.dir/main.cpp.o -MF CMakeFiles/cuakaze.dir/main.cpp.o.d -o CMakeFiles/cuakaze.dir/main.cpp.o -c /cuda_akaze_pybind/main.cpp
 
 CMakeFiles/cuakaze.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuakaze.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/cuda_akaze_pybind/main.cpp > CMakeFiles/cuakaze.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cuda_akaze_pybind/main.cpp > CMakeFiles/cuakaze.dir/main.cpp.i
 
 CMakeFiles/cuakaze.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuakaze.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/cuda_akaze_pybind/main.cpp -o CMakeFiles/cuakaze.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cuda_akaze_pybind/main.cpp -o CMakeFiles/cuakaze.dir/main.cpp.s
 
 # Object files for target cuakaze
 cuakaze_OBJECTS = \
@@ -1324,7 +1324,7 @@ cuakaze_OBJECTS = \
 
 # External object files for target cuakaze
 cuakaze_EXTERNAL_OBJECTS = \
-"/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
+"/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
 
 cuakaze: CMakeFiles/cuakaze.dir/akaze.cpp.o
 cuakaze: CMakeFiles/cuakaze.dir/fed.cpp.o
@@ -1402,7 +1402,7 @@ cuakaze: /usr/local/lib/libopencv_cudaarithm.so.4.10.0
 cuakaze: /usr/local/lib/libopencv_core.so.4.10.0
 cuakaze: /usr/local/lib/libopencv_cudev.so.4.10.0
 cuakaze: CMakeFiles/cuakaze.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cuakaze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cuakaze"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cuakaze.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1414,6 +1414,6 @@ CMakeFiles/cuakaze.dir/clean:
 .PHONY : CMakeFiles/cuakaze.dir/clean
 
 CMakeFiles/cuakaze.dir/depend: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o
-	cd /root/project/cuda_akaze_pybind/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/project/cuda_akaze_pybind /root/project/cuda_akaze_pybind /root/project/cuda_akaze_pybind/build /root/project/cuda_akaze_pybind/build /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cuda_akaze_pybind/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cuda_akaze_pybind /cuda_akaze_pybind /cuda_akaze_pybind/build /cuda_akaze_pybind/build /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cuakaze.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/project/cuda_akaze_pybind
+CMAKE_SOURCE_DIR = /cuda_akaze_pybind
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/project/cuda_akaze_pybind/build
+CMAKE_BINARY_DIR = /cuda_akaze_pybind/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/repro_test.dir/depend.make
@@ -1268,11 +1268,11 @@ CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/th
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.h
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.hpp
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_types.h
-CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.Debug.cmake
+CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.cmake
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: ../akazed.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
-	cd /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -E make_directory /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//.
-	cd /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Debug -D generated_file:STRING=/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o -D generated_cubin_file:STRING=/root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt -P /root/project/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.Debug.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
+	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -E make_directory /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//.
+	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.cmake
 
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: ../akaze_structures.h
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: ../akazed.cu
@@ -2473,53 +2473,53 @@ CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/incl
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.h
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.hpp
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/include/vector_types.h
-CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.Debug.cmake
+CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.cmake
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: ../akazed.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building NVCC (Device) object CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o"
-	cd /root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -E make_directory /root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//.
-	cd /root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Debug -D generated_file:STRING=/root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o -D generated_cubin_file:STRING=/root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o.cubin.txt -P /root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//repro_test_generated_akazed.cu.o.Debug.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building NVCC (Device) object CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o"
+	cd /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -E make_directory /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//.
+	cd /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//repro_test_generated_akazed.cu.o.cmake
 
 CMakeFiles/repro_test.dir/akaze.cpp.o: CMakeFiles/repro_test.dir/flags.make
 CMakeFiles/repro_test.dir/akaze.cpp.o: ../akaze.cpp
 CMakeFiles/repro_test.dir/akaze.cpp.o: CMakeFiles/repro_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/repro_test.dir/akaze.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/repro_test.dir/akaze.cpp.o -MF CMakeFiles/repro_test.dir/akaze.cpp.o.d -o CMakeFiles/repro_test.dir/akaze.cpp.o -c /root/project/cuda_akaze_pybind/akaze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/repro_test.dir/akaze.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/repro_test.dir/akaze.cpp.o -MF CMakeFiles/repro_test.dir/akaze.cpp.o.d -o CMakeFiles/repro_test.dir/akaze.cpp.o -c /cuda_akaze_pybind/akaze.cpp
 
 CMakeFiles/repro_test.dir/akaze.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/repro_test.dir/akaze.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/cuda_akaze_pybind/akaze.cpp > CMakeFiles/repro_test.dir/akaze.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cuda_akaze_pybind/akaze.cpp > CMakeFiles/repro_test.dir/akaze.cpp.i
 
 CMakeFiles/repro_test.dir/akaze.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/repro_test.dir/akaze.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/cuda_akaze_pybind/akaze.cpp -o CMakeFiles/repro_test.dir/akaze.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cuda_akaze_pybind/akaze.cpp -o CMakeFiles/repro_test.dir/akaze.cpp.s
 
 CMakeFiles/repro_test.dir/fed.cpp.o: CMakeFiles/repro_test.dir/flags.make
 CMakeFiles/repro_test.dir/fed.cpp.o: ../fed.cpp
 CMakeFiles/repro_test.dir/fed.cpp.o: CMakeFiles/repro_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/repro_test.dir/fed.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/repro_test.dir/fed.cpp.o -MF CMakeFiles/repro_test.dir/fed.cpp.o.d -o CMakeFiles/repro_test.dir/fed.cpp.o -c /root/project/cuda_akaze_pybind/fed.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/repro_test.dir/fed.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/repro_test.dir/fed.cpp.o -MF CMakeFiles/repro_test.dir/fed.cpp.o.d -o CMakeFiles/repro_test.dir/fed.cpp.o -c /cuda_akaze_pybind/fed.cpp
 
 CMakeFiles/repro_test.dir/fed.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/repro_test.dir/fed.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/cuda_akaze_pybind/fed.cpp > CMakeFiles/repro_test.dir/fed.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cuda_akaze_pybind/fed.cpp > CMakeFiles/repro_test.dir/fed.cpp.i
 
 CMakeFiles/repro_test.dir/fed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/repro_test.dir/fed.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/cuda_akaze_pybind/fed.cpp -o CMakeFiles/repro_test.dir/fed.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cuda_akaze_pybind/fed.cpp -o CMakeFiles/repro_test.dir/fed.cpp.s
 
 CMakeFiles/repro_test.dir/repro_test.cpp.o: CMakeFiles/repro_test.dir/flags.make
 CMakeFiles/repro_test.dir/repro_test.cpp.o: ../repro_test.cpp
 CMakeFiles/repro_test.dir/repro_test.cpp.o: CMakeFiles/repro_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/repro_test.dir/repro_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/repro_test.dir/repro_test.cpp.o -MF CMakeFiles/repro_test.dir/repro_test.cpp.o.d -o CMakeFiles/repro_test.dir/repro_test.cpp.o -c /root/project/cuda_akaze_pybind/repro_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/repro_test.dir/repro_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/repro_test.dir/repro_test.cpp.o -MF CMakeFiles/repro_test.dir/repro_test.cpp.o.d -o CMakeFiles/repro_test.dir/repro_test.cpp.o -c /cuda_akaze_pybind/repro_test.cpp
 
 CMakeFiles/repro_test.dir/repro_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/repro_test.dir/repro_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/cuda_akaze_pybind/repro_test.cpp > CMakeFiles/repro_test.dir/repro_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cuda_akaze_pybind/repro_test.cpp > CMakeFiles/repro_test.dir/repro_test.cpp.i
 
 CMakeFiles/repro_test.dir/repro_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/repro_test.dir/repro_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/cuda_akaze_pybind/repro_test.cpp -o CMakeFiles/repro_test.dir/repro_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cuda_akaze_pybind/repro_test.cpp -o CMakeFiles/repro_test.dir/repro_test.cpp.s
 
 # Object files for target repro_test
 repro_test_OBJECTS = \
@@ -2529,7 +2529,7 @@ repro_test_OBJECTS = \
 
 # External object files for target repro_test
 repro_test_EXTERNAL_OBJECTS = \
-"/root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o"
+"/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o"
 
 repro_test: CMakeFiles/repro_test.dir/akaze.cpp.o
 repro_test: CMakeFiles/repro_test.dir/fed.cpp.o
@@ -2607,7 +2607,7 @@ repro_test: /usr/local/lib/libopencv_cudaarithm.so.4.10.0
 repro_test: /usr/local/lib/libopencv_core.so.4.10.0
 repro_test: /usr/local/lib/libopencv_cudev.so.4.10.0
 repro_test: CMakeFiles/repro_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/project/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable repro_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable repro_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/repro_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2620,6 +2620,6 @@ CMakeFiles/repro_test.dir/clean:
 
 CMakeFiles/repro_test.dir/depend: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o
 CMakeFiles/repro_test.dir/depend: CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o
-	cd /root/project/cuda_akaze_pybind/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/project/cuda_akaze_pybind /root/project/cuda_akaze_pybind /root/project/cuda_akaze_pybind/build /root/project/cuda_akaze_pybind/build /root/project/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cuda_akaze_pybind/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cuda_akaze_pybind /cuda_akaze_pybind /cuda_akaze_pybind/build /cuda_akaze_pybind/build /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/repro_test.dir/depend
 
