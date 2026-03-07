@@ -1,4 +1,4 @@
-Reproducibility test (full coverage): output -> /root/project/cuda_akaze_pybind/repro_results/run26_dump.txt
+Reproducibility test (full coverage): output -> /cuda_akaze_pybind/repro_results/run26_dump.txt
 detectAndCompute (float): num_pts=3631
 fastDetectAndCompute (uchar): num_pts=3798
 detectAndCompute + cuMatch (float): pts1=3631 pts2=4820

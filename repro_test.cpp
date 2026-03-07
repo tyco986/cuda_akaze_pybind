@@ -8,6 +8,7 @@
 #include <fstream>
 #include <cstring>
 #include <cstdint>
+#include <functional>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 
@@ -115,13 +116,66 @@ static void saveMatchInputToFile(const char* binpath, akaze::AkazeData& data1, a
     f.close();
 }
 
+/* Run path 3 block (detectAndCompute + cuMatch float). Returns true if ran. */
+static bool runPath3(std::ofstream& out, const char* match_input_path,
+    int3 whp, int3 whp2, int max_npts, cv::Mat& limg, cv::Mat& rimg,
+    int noctaves, int max_scale, float per, float kcontrast, float soffset,
+    bool reordering, float derivative_factor, float dthreshold, int diffusivity, int descriptor_pattern_size,
+    std::function<std::unique_ptr<akaze::Akazer>()> makeDetector)
+{
+    auto detector = makeDetector();
+    cv::Mat fimg1, fimg2;
+    limg.convertTo(fimg1, CV_32FC1, 1.0 / 255.0);
+    rimg.convertTo(fimg2, CV_32FC1, 1.0 / 255.0);
+
+    float* img1 = nullptr;
+    float* img2 = nullptr;
+    size_t tmp_pitch = 0;
+    CHECK(cudaMallocPitch((void**)&img1, &tmp_pitch, sizeof(float) * whp.x, whp.y));
+    CHECK(cudaMallocPitch((void**)&img2, &tmp_pitch, sizeof(float) * whp2.x, whp2.y));
+    CHECK(cudaMemcpy2D(img1, sizeof(float) * whp.z, fimg1.data, sizeof(float) * whp.x,
+                      sizeof(float) * whp.x, whp.y, cudaMemcpyHostToDevice));
+    CHECK(cudaMemcpy2D(img2, sizeof(float) * whp2.z, fimg2.data, sizeof(float) * whp2.x,
+                      sizeof(float) * whp2.x, whp2.y, cudaMemcpyHostToDevice));
+
+    akaze::AkazeData data1, data2;
+    akaze::initAkazeData(data1, max_npts, true, true);
+    akaze::initAkazeData(data2, max_npts, true, true);
+
+    detector->detectAndCompute(img1, data1, whp, true);
+    detector->detectAndCompute(img2, data2, whp2, true);
+    out << "[detectAndCompute_float_desc_checksum] ";
+    for (int i = 0; i < 5 && i < data1.num_pts; i++)
+        out << "pt" << i << "_h=" << descChecksum(data1.h_data[i].features, FLEN) << " ";
+    for (int i = 0; i < 5 && i < data2.num_pts; i++)
+        out << "pt2_" << i << "_h=" << descChecksum(data2.h_data[i].features, FLEN) << " ";
+    out << "\n";
+    if (match_input_path) {
+        saveMatchInputToFile(match_input_path, data1, data2);
+    }
+    akaze::cuMatch(data1, data2);
+
+    dumpAkazeData(out, "detectAndCompute_float_match1", data1);
+    dumpAkazeData(out, "detectAndCompute_float_match2", data2);
+    std::cout << "detectAndCompute + cuMatch (float): pts1=" << data1.num_pts
+              << " pts2=" << data2.num_pts << std::endl;
+
+    CHECK(cudaFree(img1));
+    CHECK(cudaFree(img2));
+    akaze::freeAkazeData(data1);
+    akaze::freeAkazeData(data2);
+    return true;
+}
+
 int main(int argc, char** argv) {
     if (dumpMatchInputIfRequested(argc, argv))
         return 0;
 
     const char* outfile = (argc > 1) ? argv[1] : "run_dump.txt";
-    const char* match_input_path = (argc > 2) ? argv[2] : nullptr;  /* dump gHammingMatch inputs before path3 cuMatch */
-    std::cout << "Reproducibility test (full coverage): output -> " << outfile << std::endl;
+    const char* match_input_path = (argc > 2) ? argv[2] : nullptr;
+    /* Mode: default=full, path_order_inv=path3 first, path3_only=only path3 */
+    std::string mode = (argc > 3) ? argv[3] : "full";
+    std::cout << "Reproducibility test (" << mode << "): output -> " << outfile << std::endl;
 
     cv::Mat limg = cv::imread("data/left.pgm", cv::IMREAD_GRAYSCALE);
     cv::Mat rimg = cv::imread("data/right.pgm", cv::IMREAD_GRAYSCALE);
@@ -169,8 +223,7 @@ int main(int argc, char** argv) {
         return d;
     };
 
-    /* --- Path 1: detectAndCompute (float) - covers akaze namespace float path --- */
-    {
+    auto runPath1 = [&]() {
         auto detector = makeDetector();
         cv::Mat fimg;
         limg.convertTo(fimg, CV_32FC1, 1.0 / 255.0);
@@ -180,19 +233,16 @@ int main(int argc, char** argv) {
         const size_t dpitch = sizeof(float) * whp.z;
         const size_t spitch = sizeof(float) * whp.x;
         CHECK(cudaMemcpy2D(img, dpitch, fimg.data, spitch, spitch, whp.y, cudaMemcpyHostToDevice));
-
         akaze::AkazeData akaze_data;
         akaze::initAkazeData(akaze_data, max_npts, true, true);
         detector->detectAndCompute(img, akaze_data, whp, true);
         dumpAkazeData(out, "detectAndCompute_float", akaze_data);
         std::cout << "detectAndCompute (float): num_pts=" << akaze_data.num_pts << std::endl;
-
         CHECK(cudaFree(img));
         akaze::freeAkazeData(akaze_data);
-    }
+    };
 
-    /* --- Path 2: fastDetectAndCompute (unsigned char) - covers fastakaze namespace --- */
-    {
+    auto runPath2 = [&]() {
         auto detector = makeDetector();
         unsigned char* img = nullptr;
         size_t tmp_pitch = 0;
@@ -200,66 +250,16 @@ int main(int argc, char** argv) {
         const size_t dpitch = sizeof(unsigned char) * whp.z;
         const size_t spitch = sizeof(unsigned char) * whp.x;
         CHECK(cudaMemcpy2D(img, dpitch, limg.data, spitch, spitch, whp.y, cudaMemcpyHostToDevice));
-
         akaze::AkazeData akaze_data;
         akaze::initAkazeData(akaze_data, max_npts, true, true);
         detector->fastDetectAndCompute(img, akaze_data, whp, true);
         dumpAkazeData(out, "fastDetectAndCompute_uchar", akaze_data);
         std::cout << "fastDetectAndCompute (uchar): num_pts=" << akaze_data.num_pts << std::endl;
-
         CHECK(cudaFree(img));
         akaze::freeAkazeData(akaze_data);
-    }
+    };
 
-    /* --- Path 3: detectAndCompute + cuMatch (float) - covers hMatch, gMatch, gHammingMatch --- */
-    {
-        auto detector = makeDetector();
-        cv::Mat fimg1, fimg2;
-        limg.convertTo(fimg1, CV_32FC1, 1.0 / 255.0);
-        rimg.convertTo(fimg2, CV_32FC1, 1.0 / 255.0);
-
-        float* img1 = nullptr;
-        float* img2 = nullptr;
-        size_t tmp_pitch = 0;
-        CHECK(cudaMallocPitch((void**)&img1, &tmp_pitch, sizeof(float) * whp.x, whp.y));
-        CHECK(cudaMallocPitch((void**)&img2, &tmp_pitch, sizeof(float) * whp2.x, whp2.y));
-        CHECK(cudaMemcpy2D(img1, sizeof(float) * whp.z, fimg1.data, sizeof(float) * whp.x,
-                          sizeof(float) * whp.x, whp.y, cudaMemcpyHostToDevice));
-        CHECK(cudaMemcpy2D(img2, sizeof(float) * whp2.z, fimg2.data, sizeof(float) * whp2.x,
-                          sizeof(float) * whp2.x, whp2.y, cudaMemcpyHostToDevice));
-
-        akaze::AkazeData data1, data2;
-        akaze::initAkazeData(data1, max_npts, true, true);
-        akaze::initAkazeData(data2, max_npts, true, true);
-
-        detector->detectAndCompute(img1, data1, whp, true);
-        detector->detectAndCompute(img2, data2, whp2, true);
-        /* Descriptor checksum BEFORE match - if varies across runs, issue is gDescribe/gBuildDescriptor */
-        out << "[detectAndCompute_float_desc_checksum] ";
-        for (int i = 0; i < 5 && i < data1.num_pts; i++)
-            out << "pt" << i << "_h=" << descChecksum(data1.h_data[i].features, FLEN) << " ";
-        for (int i = 0; i < 5 && i < data2.num_pts; i++)
-            out << "pt2_" << i << "_h=" << descChecksum(data2.h_data[i].features, FLEN) << " ";
-        out << "\n";
-        /* Dump gHammingMatch inputs before cuMatch (same scenario as run_reproducibility_test) */
-        if (match_input_path) {
-            saveMatchInputToFile(match_input_path, data1, data2);
-        }
-        akaze::cuMatch(data1, data2);
-
-        dumpAkazeData(out, "detectAndCompute_float_match1", data1);
-        dumpAkazeData(out, "detectAndCompute_float_match2", data2);
-        std::cout << "detectAndCompute + cuMatch (float): pts1=" << data1.num_pts
-                  << " pts2=" << data2.num_pts << std::endl;
-
-        CHECK(cudaFree(img1));
-        CHECK(cudaFree(img2));
-        akaze::freeAkazeData(data1);
-        akaze::freeAkazeData(data2);
-    }
-
-    /* --- Path 4: fastDetectAndCompute + cuMatch (unsigned char) --- */
-    {
+    auto runPath4 = [&]() {
         auto detector = makeDetector();
         unsigned char* img1 = nullptr;
         unsigned char* img2 = nullptr;
@@ -270,29 +270,47 @@ int main(int argc, char** argv) {
                           sizeof(unsigned char) * whp.x, whp.y, cudaMemcpyHostToDevice));
         CHECK(cudaMemcpy2D(img2, sizeof(unsigned char) * whp2.z, rimg.data, sizeof(unsigned char) * whp2.x,
                           sizeof(unsigned char) * whp2.x, whp2.y, cudaMemcpyHostToDevice));
-
         akaze::AkazeData data1, data2;
         akaze::initAkazeData(data1, max_npts, true, true);
         akaze::initAkazeData(data2, max_npts, true, true);
-
         detector->fastDetectAndCompute(img1, data1, whp, true);
         detector->fastDetectAndCompute(img2, data2, whp2, true);
         akaze::cuMatch(data1, data2);
-
         dumpAkazeData(out, "fastDetectAndCompute_uchar_match1", data1);
         dumpAkazeData(out, "fastDetectAndCompute_uchar_match2", data2);
         std::cout << "fastDetectAndCompute + cuMatch (uchar): pts1=" << data1.num_pts
                   << " pts2=" << data2.num_pts << std::endl;
-
         CHECK(cudaFree(img1));
         CHECK(cudaFree(img2));
         akaze::freeAkazeData(data1);
         akaze::freeAkazeData(data2);
+    };
+
+    if (mode == "path3_only") {
+        runPath3(out, match_input_path, whp, whp2, max_npts, limg, rimg,
+            noctaves, max_scale, per, kcontrast, soffset, reordering,
+            derivative_factor, dthreshold, diffusivity, descriptor_pattern_size, makeDetector);
+    } else if (mode == "path_order_inv") {
+        /* Path 3 first (no path 1/2 pollution), then path 1, 2, 4 */
+        runPath3(out, match_input_path, whp, whp2, max_npts, limg, rimg,
+            noctaves, max_scale, per, kcontrast, soffset, reordering,
+            derivative_factor, dthreshold, diffusivity, descriptor_pattern_size, makeDetector);
+        runPath1();
+        runPath2();
+        runPath4();
+    } else {
+        /* Default: path 1, 2, 3, 4 */
+        runPath1();
+        runPath2();
+        runPath3(out, match_input_path, whp, whp2, max_npts, limg, rimg,
+            noctaves, max_scale, per, kcontrast, soffset, reordering,
+            derivative_factor, dthreshold, diffusivity, descriptor_pattern_size, makeDetector);
+        runPath4();
     }
 
     out.close();
 
     CHECK(cudaDeviceReset());
-    std::cout << "Done. Full coverage: detectAndCompute, fastDetectAndCompute, cuMatch, setHistogram." << std::endl;
+    std::cout << "Done." << std::endl;
     return 0;
 }

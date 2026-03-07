@@ -81,12 +81,25 @@ __global__ void gHammingMatch(AkazePoint* points1, AkazePoint* points2, int n1, 
     flags[tid] = distance[0] < distance[tid] ? 1 : 0;
     __syncthreads();
 
+    // Tree reduction (synced with akazed.cu: each step only writers participate, __syncthreads between steps)
     if (tid < 8) {
         volatile int* vsmem = flags;
         vsmem[tid] += vsmem[tid + 8];
+    }
+    __syncthreads();
+    if (tid < 4) {
+        volatile int* vsmem = flags;
         vsmem[tid] += vsmem[tid + 4];
+    }
+    __syncthreads();
+    if (tid < 2) {
+        volatile int* vsmem = flags;
         vsmem[tid] += vsmem[tid + 2];
-        vsmem[tid] += vsmem[tid + 1];
+    }
+    __syncthreads();
+    if (tid == 0) {
+        volatile int* vsmem = flags;
+        vsmem[0] += vsmem[1];
     }
 
     if (tid == 0) {

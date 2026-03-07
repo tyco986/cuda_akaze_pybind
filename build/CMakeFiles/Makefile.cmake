@@ -65,9 +65,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.cmake.pre-gen"
   "CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.cmake.pre-gen"
   "CMakeFiles/test_gHammingMatch.dir/test_gHammingMatch_generated_test_gHammingMatch.cu.o.cmake.pre-gen"
-  "CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.cmake"
-  "CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.cmake"
-  "CMakeFiles/test_gHammingMatch.dir/test_gHammingMatch_generated_test_gHammingMatch.cu.o.cmake"
+  "CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.Debug.cmake"
+  "CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.Debug.cmake"
+  "CMakeFiles/test_gHammingMatch.dir/test_gHammingMatch_generated_test_gHammingMatch.cu.o.Debug.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

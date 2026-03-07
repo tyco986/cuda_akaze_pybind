@@ -1268,11 +1268,11 @@ CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/th
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.h
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.hpp
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: /usr/local/cuda/include/vector_types.h
-CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.cmake
+CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o.Debug.cmake
 CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o: ../akazed.cu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuakaze.dir/cuakaze_generated_akazed.cu.o"
 	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -E make_directory /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//.
-	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.cmake
+	cd /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Debug -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//./cuakaze_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/cuakaze.dir//cuakaze_generated_akazed.cu.o.Debug.cmake
 
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: ../akaze_structures.h
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: ../akazed.cu
@@ -2473,11 +2473,11 @@ CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/incl
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.h
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/include/vector_functions.hpp
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: /usr/local/cuda/include/vector_types.h
-CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.cmake
+CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o.Debug.cmake
 CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o: ../akazed.cu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/cuda_akaze_pybind/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building NVCC (Device) object CMakeFiles/repro_test.dir/repro_test_generated_akazed.cu.o"
 	cd /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -E make_directory /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//.
-	cd /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//repro_test_generated_akazed.cu.o.cmake
+	cd /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING=Debug -D generated_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o -D generated_cubin_file:STRING=/cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//./repro_test_generated_akazed.cu.o.cubin.txt -P /cuda_akaze_pybind/build/CMakeFiles/repro_test.dir//repro_test_generated_akazed.cu.o.Debug.cmake
 
 CMakeFiles/repro_test.dir/akaze.cpp.o: CMakeFiles/repro_test.dir/flags.make
 CMakeFiles/repro_test.dir/akaze.cpp.o: ../akaze.cpp

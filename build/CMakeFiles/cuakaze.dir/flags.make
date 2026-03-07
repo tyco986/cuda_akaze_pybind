@@ -7,11 +7,11 @@ CUDA_DEFINES =
 
 CUDA_INCLUDES = -I/cuda_akaze_pybind -I/usr/local/cuda/include -isystem=/usr/local/include/opencv4
 
-CUDA_FLAGS =  --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler=-fPIE
+CUDA_FLAGS = -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler=-fPIE
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/cuda_akaze_pybind -I/usr/local/cuda/include -isystem /usr/local/include/opencv4
 
-CXX_FLAGS =  -O2 -msse2  -fPIE
+CXX_FLAGS =  -O2 -msse2  -g -fPIE
 
