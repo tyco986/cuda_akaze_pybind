@@ -474,6 +474,7 @@ namespace akaze
 		{
 			sdata[toy][tix] = 0.0f;
 		}
+		__syncthreads();
 
 		int yborder = X2 - 1;
 		int new_toy = toy, new_siy = siy;
@@ -3226,6 +3227,7 @@ namespace fastakaze
 		{
 			sdata[toy][tix] = 0;
 		}
+		__syncthreads();
 
 		int yborder = X2 - 1;
 		int new_toy = toy, new_siy = siy;
