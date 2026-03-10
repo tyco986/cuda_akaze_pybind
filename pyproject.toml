@@ -7,5 +7,5 @@ name = "cuda-akaze"
 version = "0.1.0"
 description = "CUDA-accelerated AKAZE feature detection and matching"
 requires-python = ">=3.8"
-license = "MIT"
-dependencies = ["numpy", "scikit-image"]
+license = {text = "MIT"}
+dependencies = ["numpy", "scikit-image", "nvidia-ml-py"]

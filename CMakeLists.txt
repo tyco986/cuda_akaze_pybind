@@ -9,9 +9,9 @@ include(CPack)
 find_package(OpenCV REQUIRED)
 find_package(CUDA)
 find_package(pybind11 CONFIG QUIET)
-if (NOT CUDA_FOUND)
+if(NOT CUDA_FOUND)
   message(STATUS "CUDA not found. Project will not be built.")
-endif(NOT CUDA_FOUND)
+endif()
 
 if (WIN32)
   set(EXTRA_CXX_FLAGS "/DVERBOSE /D_CRT_SECURE_NO_WARNINGS ")
@@ -27,26 +27,24 @@ if (UNIX)
   endif()
 endif()
 
+set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
 set(cuda_sources
-  akazed.cu
-  akazed.h
-  akaze.cpp
-  akaze.h
-  akaze_structures.h
-  cuda_utils.h
-  fed.cpp
-  fed.h
-)  
+  ${SRC_DIR}/akazed.cu
+  ${SRC_DIR}/akazed.h
+  ${SRC_DIR}/akaze.cpp
+  ${SRC_DIR}/akaze.h
+  ${SRC_DIR}/akaze_structures.h
+  ${SRC_DIR}/cuda_utils.h
+  ${SRC_DIR}/fed.cpp
+  ${SRC_DIR}/fed.h
+)
 
 set(sources
-  main.cpp
+  ${SRC_DIR}/main.cpp
 )
 
-include_directories(
-  ${CMAKE_CURRENT_SOURCE_DIR} 
-)
-
-#SET(CUDA_SEPARABLE_COMPILATION ON)
+include_directories(${SRC_DIR})
 
 cuda_add_executable(cuakaze ${cuda_sources} ${sources} OPTIONS -arch=sm_75)
 
@@ -56,29 +54,15 @@ set_target_properties(cuakaze PROPERTIES
 
 target_link_libraries(cuakaze ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
 
-# Reproducibility test executable (single run, outputs to file)
-set(repro_sources repro_test.cpp)
-cuda_add_executable(repro_test ${cuda_sources} ${repro_sources} OPTIONS -arch=sm_75)
-set_target_properties(repro_test PROPERTIES COMPILE_FLAGS "${EXTRA_CXX_FLAGS}")
-target_link_libraries(repro_test ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
-
-# Standalone gHammingMatch test - loads saved inputs, runs kernel only
-cuda_add_executable(test_gHammingMatch test_gHammingMatch.cu cuda_utils.h akaze_structures.h OPTIONS -arch=sm_75)
-set_target_properties(test_gHammingMatch PROPERTIES COMPILE_FLAGS "${EXTRA_CXX_FLAGS}")
-target_include_directories(test_gHammingMatch PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(test_gHammingMatch ${CUDA_cudadevrt_LIBRARY})
-
-# Debug build option: -DCMAKE_BUILD_TYPE=Debug for GDB
-
 # Python module (pybind11 + scikit-build)
 if(pybind11_FOUND AND CUDA_FOUND)
-  cuda_add_library(akaze_core STATIC akazed.cu akaze.cpp fed.cpp OPTIONS -arch=sm_75)
+  cuda_add_library(akaze_core STATIC ${SRC_DIR}/akazed.cu ${SRC_DIR}/akaze.cpp ${SRC_DIR}/fed.cpp OPTIONS -arch=sm_75)
   set_target_properties(akaze_core PROPERTIES COMPILE_FLAGS "${EXTRA_CXX_FLAGS}")
-  target_include_directories(akaze_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+  target_include_directories(akaze_core PUBLIC ${SRC_DIR})
 
-  pybind11_add_module(_cuda_akaze akaze_bindings.cpp)
+  pybind11_add_module(_cuda_akaze ${SRC_DIR}/akaze_bindings.cpp)
   target_link_libraries(_cuda_akaze PRIVATE akaze_core)
-  target_include_directories(_cuda_akaze PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+  target_include_directories(_cuda_akaze PRIVATE ${SRC_DIR})
   install(TARGETS _cuda_akaze LIBRARY DESTINATION . RUNTIME DESTINATION . ARCHIVE DESTINATION .)
   install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/cuda_akaze/__init__.py DESTINATION .)
 endif()

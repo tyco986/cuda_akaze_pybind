@@ -1,2 +1,0 @@
-/usr/bin/ar qc libakaze_core.a CMakeFiles/akaze_core.dir/akaze.cpp.o CMakeFiles/akaze_core.dir/fed.cpp.o CMakeFiles/akaze_core.dir/akaze_core_generated_akazed.cu.o
-/usr/bin/ranlib libakaze_core.a

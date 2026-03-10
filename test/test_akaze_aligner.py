@@ -8,34 +8,25 @@ import threading
 import time
 from pathlib import Path
 
-import cv2
 import numpy as np
 import psutil
+from skimage import io
 
-try:
-    import pynvml
-    HAS_NVML = True
-except ImportError:
-    HAS_NVML = False
+import cuda_akaze
+import pynvml  # from nvidia-ml-py
 
 
 def _monitor_loop(stop_event, gpu_peak, cpu_peak, mem_peak, gpu_handle, process):
     """Background thread to track peak GPU, CPU, and memory usage."""
     while not stop_event.is_set():
         if process is not None:
-            try:
-                cpu_peak[0] = max(cpu_peak[0], process.cpu_percent())
-                mem_info = process.memory_info()
-                mem_peak[0] = max(mem_peak[0], mem_info.rss)
-            except (psutil.NoSuchProcess, psutil.AccessDenied):
-                pass
-        if HAS_NVML and gpu_handle is not None:
-            try:
-                mem = pynvml.nvmlDeviceGetMemoryInfo(gpu_handle)
-                gpu_peak[0] = max(gpu_peak[0], mem.used)
-            except Exception:
-                pass
-        stop_event.wait(0.05)
+            cpu_peak[0] = max(cpu_peak[0], process.cpu_percent())
+            mem_info = process.memory_info()
+            mem_peak[0] = max(mem_peak[0], mem_info.rss)
+        if gpu_handle is not None:
+            mem = pynvml.nvmlDeviceGetMemoryInfo(gpu_handle)
+            gpu_peak[0] = max(gpu_peak[0], mem.used)
+        stop_event.wait(0.2)
 
 
 def main():
@@ -43,14 +34,14 @@ def main():
     parser.add_argument(
         "--image",
         type=str,
-        default="image.png",
-        help="Input image path (default: image.png)",
+        default="test/image.png",
+        help="Input image path (default: test/image.png)",
     )
     parser.add_argument(
         "--template",
         type=str,
-        default="template.png",
-        help="Template image path (default: template.png)",
+        default="test/template.png",
+        help="Template image path (default: test/template.png)",
     )
     parser.add_argument(
         "--batch",
@@ -69,6 +60,13 @@ def main():
         action="store_true",
         help="Disable NNDR filter for speed (RANSAC still filters outliers)",
     )
+    parser.add_argument(
+        "--mode",
+        type=str,
+        default="fast",
+        choices=["fast", "accurate"],
+        help="Detection mode: fast (default) or accurate",
+    )
     args = parser.parse_args()
 
     image_path = Path(args.image).resolve()
@@ -79,28 +77,20 @@ def main():
     if not template_path.exists():
         raise FileNotFoundError(f"Template not found: {template_path}")
 
-    img = cv2.imread(str(image_path), cv2.IMREAD_GRAYSCALE)
-    tpl = cv2.imread(str(template_path), cv2.IMREAD_GRAYSCALE)
-    if img is None:
-        raise RuntimeError(f"Failed to load image: {image_path}")
-    if tpl is None:
-        raise RuntimeError(f"Failed to load template: {template_path}")
+    img = io.imread(str(image_path), as_gray=True)
+    tpl = io.imread(str(template_path), as_gray=True)
 
     batch = args.batch
     template_batch = np.tile(tpl[np.newaxis, :, :], (batch, 1, 1))
     image_batch = np.tile(img[np.newaxis, :, :], (batch, 1, 1))
 
-    import cuda_akaze
+    aligner = cuda_akaze.AkazeAligner(device=args.device, use_nndr=not args.no_nndr, mode=args.mode)
 
-    aligner = cuda_akaze.AkazeAligner(device=args.device, use_nndr=not args.no_nndr)
-
-    # Warmup
-    _ = aligner.find_transform(template_batch[:1], image_batch[:1])
-    if HAS_NVML:
-        pynvml.nvmlInit()
-        gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(args.device)
-    else:
-        gpu_handle = None
+    # Warmup with full batch to stabilize GPU clocks and JIT caches
+    for _ in range(3):
+        _ = aligner.find_transform(template_batch, image_batch)
+    pynvml.nvmlInit()
+    gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(args.device)
 
     process = psutil.Process()
     gpu_peak = [0]
@@ -120,8 +110,7 @@ def main():
     stop_event.set()
     monitor.join()
 
-    if HAS_NVML:
-        pynvml.nvmlShutdown()
+    pynvml.nvmlShutdown()
 
     elapsed_ms = (t1 - t0) * 1000
     gpu_mb = gpu_peak[0] / (1024 * 1024)
@@ -131,6 +120,7 @@ def main():
 
     print("--- AkazeAligner benchmark ---")
     print(f"  Batch size:        {batch}")
+    print(f"  Mode:              {args.mode}")
     print(f"  Image shape:       {img.shape}")
     print(f"  Template shape:    {tpl.shape}")
     print(f"  GPU peak (MB):     {gpu_mb:.2f}")

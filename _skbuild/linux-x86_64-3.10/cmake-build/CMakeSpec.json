@@ -1,1 +1,0 @@
-{"args": ["/usr/bin/cmake", "-Dpybind11_DIR=/usr/local/lib/python3.10/dist-packages/pybind11/share/cmake/pybind11", "-DCMAKE_BUILD_TYPE:STRING=Release"], "version": "3.22.1", "environment": {"PYTHONNOUSERSITE": null, "PYTHONPATH": null}}
