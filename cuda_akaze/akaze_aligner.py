@@ -32,11 +32,11 @@ def _to_gray_u8(x) -> np.ndarray:
         arr = arr[np.newaxis]
     if arr.dtype == np.uint8:
         return arr
-    if arr.dtype in (np.float32, np.float64):
-        if arr.max() <= 1.0:
-            return (arr * 255.0).clip(0, 255).astype(np.uint8)
-        return arr.clip(0, 255).astype(np.uint8)
-    return arr.astype(np.uint8)
+    alpha = 255.0 if arr.flat[0] <= 1.0 else 1.0
+    out = np.empty(arr.shape, dtype=np.uint8)
+    for b in range(arr.shape[0]):
+        cv2.convertScaleAbs(arr[b], dst=out[b], alpha=alpha)
+    return out
 
 
 class AkazeAligner:

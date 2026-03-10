@@ -9,8 +9,8 @@ import time
 from pathlib import Path
 
 import numpy as np
+import cv2
 import psutil
-from skimage import io
 
 import cuda_akaze
 import pynvml  # from nvidia-ml-py
@@ -77,8 +77,8 @@ def main():
     if not template_path.exists():
         raise FileNotFoundError(f"Template not found: {template_path}")
 
-    img = io.imread(str(image_path), as_gray=True)
-    tpl = io.imread(str(template_path), as_gray=True)
+    img = cv2.imread(str(image_path), cv2.IMREAD_GRAYSCALE)
+    tpl = cv2.imread(str(template_path), cv2.IMREAD_GRAYSCALE)
 
     batch = args.batch
     template_batch = np.tile(tpl[np.newaxis, :, :], (batch, 1, 1))
