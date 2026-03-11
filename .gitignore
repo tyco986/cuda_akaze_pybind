@@ -1,0 +1,5 @@
+build/
+_skbuild/
+cuda_akaze/__pycache__/
+cuda_akaze/*.so
+cuda_akaze.egg-info

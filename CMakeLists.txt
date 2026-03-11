@@ -28,6 +28,7 @@ if (UNIX)
 endif()
 
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(CPP_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cuda_akaze_cpp)
 
 set(cuda_sources
   ${SRC_DIR}/akazed.cu
@@ -40,19 +41,43 @@ set(cuda_sources
   ${SRC_DIR}/fed.h
 )
 
-set(sources
-  ${SRC_DIR}/main.cpp
+include_directories(${SRC_DIR} ${CPP_DIR})
+
+# NVML for GPU peak monitoring (AkazeAligner benchmark)
+set(NVML_LIBRARY "")
+if(EXISTS "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.1")
+  set(NVML_LIBRARY "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.1")
+endif()
+if(NOT NVML_LIBRARY)
+  find_library(NVML_LIBRARY nvidia-ml
+    PATHS /usr/local/cuda/targets/x86_64-linux/lib/stubs
+          /usr/local/cuda-12/targets/x86_64-linux/lib/stubs)
+endif()
+find_path(NVML_INCLUDE_DIR nvml.h
+  PATHS /usr/local/cuda/targets/x86_64-linux/include
+        /usr/local/cuda/include
+        /usr/include)
+if(NVML_LIBRARY AND NVML_INCLUDE_DIR)
+  message(STATUS "Found NVML: ${NVML_LIBRARY}")
+  set(HAVE_NVML 1)
+else()
+  message(STATUS "NVML not found, GPU peak monitoring disabled")
+  set(HAVE_NVML 0)
+endif()
+
+# AkazeAligner benchmark executable (C++ equivalent of cuda_akaze/test_akaze_aligner.py)
+cuda_add_executable(cuda_akaze ${cuda_sources}
+  ${CPP_DIR}/akaze_aligner.cpp
+  ${CPP_DIR}/test_akaze_aligner.cpp
+  OPTIONS -arch=sm_75)
+set_target_properties(cuda_akaze PROPERTIES
+  COMPILE_FLAGS "${EXTRA_CXX_FLAGS} -DHAVE_NVML=${HAVE_NVML}"
 )
-
-include_directories(${SRC_DIR})
-
-cuda_add_executable(cuakaze ${cuda_sources} ${sources} OPTIONS -arch=sm_75)
-
-set_target_properties(cuakaze PROPERTIES
-  COMPILE_FLAGS "${EXTRA_CXX_FLAGS}"			   
-)
-
-target_link_libraries(cuakaze ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
+target_link_libraries(cuda_akaze ${CUDA_cudadevrt_LIBRARY} ${OpenCV_LIBS})
+if(NVML_LIBRARY)
+  target_link_libraries(cuda_akaze ${NVML_LIBRARY})
+  target_include_directories(cuda_akaze PRIVATE ${NVML_INCLUDE_DIR})
+endif()
 
 # Python module (pybind11 + scikit-build)
 if(pybind11_FOUND AND CUDA_FOUND)
