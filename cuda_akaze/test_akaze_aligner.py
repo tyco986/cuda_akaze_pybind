@@ -34,14 +34,14 @@ def main():
     parser.add_argument(
         "--image",
         type=str,
-        default="test/image.png",
-        help="Input image path (default: test/image.png)",
+        default="example_data/image.png",
+        help="Input image path (default: example_data/image.png)",
     )
     parser.add_argument(
         "--template",
         type=str,
-        default="test/template.png",
-        help="Template image path (default: test/template.png)",
+        default="example_data/template.png",
+        help="Template image path (default: example_data/template.png)",
     )
     parser.add_argument(
         "--batch",
